@@ -1,3 +1,4 @@
+/*
 const cooldown = new Set();
 
 module.exports = {
@@ -67,3 +68,4 @@ module.exports = {
 		}
 	},
 };
+*/

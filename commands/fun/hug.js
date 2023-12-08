@@ -14,7 +14,10 @@ module.exports = {
 				message.delete().catch(console.error);
 
 				const embed = {
-					description: user ? `${message.author} **hugged** ${user}` : 'hug',
+					description: user ? `${message.author} ***gave a tight squeeze to*** ${user}` : `<@${message.client.user.id}> ***gave a tight squeeze to*** ${message.author}`,
+					thumbnail: {
+						url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1182824057603883158/hug.gif',
+					},
 					color: color,
 					footer: { text: 'Use `gg.hug` to give another squeeze!' },
 					timestamp: new Date(),

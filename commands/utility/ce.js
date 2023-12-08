@@ -1,3 +1,4 @@
+/*
 const cooldown = new Set();
 const { commandLogger, errorLogger } = require('../../logger.js');
 
@@ -109,3 +110,4 @@ function createFields(parsedArgs) {
 
 	return fields;
 }
+*/
