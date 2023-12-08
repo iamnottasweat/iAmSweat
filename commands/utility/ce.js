@@ -1,5 +1,5 @@
 const cooldown = new Set();
-//  = require('../../// .js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 // Define shorthandMap globally
 const shorthandMap = {
@@ -48,11 +48,11 @@ module.exports = {
 			setTimeout(() => {
 				cooldown.delete(message.author.id);
 			}, 5000);
-			// (message.guild.name + ' | ' + message.author.username + ' | CE | ' + message.channel.name + ' | ' + message.createdTimestamp);
+			commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | CE | ' + message.channel.name + ' | ' + message.createdTimestamp);
 
-			// .info('Parsed Args:', parsedArgs);
+			commandLogger.info('Parsed Args:', parsedArgs);
 		} catch (error) {
-			// .error(error);
+			errorLogger.error(error);
 
 			const color = Math.floor(Math.random() * 16777215);
 

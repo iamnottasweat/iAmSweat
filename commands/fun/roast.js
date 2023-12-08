@@ -8,7 +8,6 @@ module.exports = {
 		if (cooldown.has(message.author.id)) {
 			message.reply('Wait 5 seconds before using this command again.');
 		} else {
-			// ('Executing roast command');
 			try {
 				const resp = await axios.get('https://evilinsult.com/generate_insult.php?lang=en&type=json');
 				const roast = resp.data.insult;
@@ -34,6 +33,7 @@ module.exports = {
 					cooldown.delete(message.author.id);
 				}, 5000);
 			} catch (error) {
+				console.error(error);
 				message.channel.send('Sorry, I was unable to get a roast.');
 			}
 		}

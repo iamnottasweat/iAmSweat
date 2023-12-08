@@ -25,7 +25,7 @@ module.exports = {
 								inline: false,
 							},
 							{
-								name: 'gg.cehelp',
+								name: '**gg.cehelp**',
 								value: 'Shows available arguments for use with `gg.ce`',
 								inline: false,
 							},
