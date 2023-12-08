@@ -6,8 +6,6 @@ const client = new Client({
 const fs = require('fs');
 const path = require('path');
 const prefix = 'gg.';
-// const //  = require('./// ');
-// console.log(// );
 client.commands = new Collection();
 
 const commandFolders = fs.readdirSync('./commands').filter((folder) => {
