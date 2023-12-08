@@ -1,8 +1,12 @@
 {
 	"name": "iamsweat",
 	"version": "1.4.1",
-	"description": "A Discord message commad bot.",
+	"description": "A Discord message command bot.",
 	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iamnottasweat/iAmSweat"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon .",
