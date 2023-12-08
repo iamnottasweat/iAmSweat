@@ -2,7 +2,6 @@
 
 ## **Features**
 
-- **Customizable Prefix** - _Change the prefix to whatever you want!_
 - **Over 30 Commands** - _From moderation to fun to informational commands, iAmSweat has it all!_
 - **Easy to Use** - _iAmSweat is easy to use and has a simple help command! No (/) commands necessary!_
 - **Open Source** - _iAmSweat is open source, so you can contribute to the bot!_
