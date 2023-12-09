@@ -5,7 +5,7 @@ const client = new Client({
 });
 const fs = require('fs');
 const path = require('path');
-const prefix = 'gg.';
+const prefixes = ['gg.', ';'];
 client.commands = new Collection();
 
 const commandFolders = fs.readdirSync('./commands').filter((folder) => {
@@ -21,6 +21,7 @@ for (const folder of commandFolders) {
 }
 
 client.on('messageCreate', (message) => {
+	const prefix = prefixes.find((p) => message.content.startsWith(p));
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);

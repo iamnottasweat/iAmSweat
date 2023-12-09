@@ -2,7 +2,7 @@
 const cooldown = new Set();
 
 module.exports = {
-	name: 'cehelp',
+	name: 'embedhelp',
 	description: 'Formatting for the embed builder',
 	async execute(message) {
 		if (cooldown.has(message.author.id)) {

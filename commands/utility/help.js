@@ -1,5 +1,4 @@
 const cooldown = new Set();
-const prefix = 'gg.';
 const color = Math.floor(Math.random() * 16777215);
 const { errorLogger, commandLogger } = require('../../logger.js');
 
@@ -201,7 +200,7 @@ module.exports = {
 
 				if (args.length === 0) {
 					const availableCategories = categories.map((category) => `\`${category.name}\``).join(', ');
-					const helpMessage = `__**Usage**__\n\n\`${prefix}help category_name\`\n\n__**Available Categories**__\n\n${availableCategories}`;
+					const helpMessage = `__**Usage**__\n\n\`gg.help category_name\`\n\n__**Available Categories**__\n\n${availableCategories}`;
 
 					const helpEmbed = {
 						description: helpMessage,

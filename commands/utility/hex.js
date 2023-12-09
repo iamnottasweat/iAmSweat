@@ -16,8 +16,7 @@ module.exports = {
 				message.delete().catch(console.error);
 
 				const embed = {
-					title: '# RANDOM COLOR',
-					description: `# __**HEX:**__ #${hexColor}\n# __**DECIMAL:**__ ${decimalColor}`,
+					description: `__**Random Hex Color**__\n\n**HEX:** __***#${hexColor}***__\n\n**DECIMAL:** __***${decimalColor}***__`,
 					color: color,
 					thumbnail: {
 						url: `https://singlecolorimage.com/get/${hexColor}/400x400`,
