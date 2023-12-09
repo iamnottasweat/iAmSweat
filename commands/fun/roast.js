@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'roast',
@@ -32,8 +33,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | ROAST |' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a roast.');
 			}
 		}

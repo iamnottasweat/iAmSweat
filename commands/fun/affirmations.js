@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
-const { logger, commandLogger } = require('../../logger.js');
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'affirmations',
@@ -37,7 +37,7 @@ module.exports = {
 				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | AFFIRMATIONS | ' + message.channel.name + ' | ' + message.createdTimestamp);
 				commandLogger.debug('Affirmations command executed.');
 			} catch (error) {
-				logger.error('Error executing affirmation command: ' + error);
+				errorLogger.error('Error executing affirmation command: ' + error);
 				message.channel.send('Sorry, I was unable to get an affirmation.');
 			}
 		}

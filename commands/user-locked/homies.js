@@ -1,6 +1,6 @@
 const cooldown = new Set();
 const color = Math.floor(Math.random() * 16777215);
-const commandLogger = require('../../logger.js');
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 const allowedUserIds = [process.env.sweat, process.env.buzz, process.env.banana, process.env.otter, process.env.cactus, process.env.flamingo, process.env.pistol, process.env.alfa, process.env.crazy, process.env.twisty];
 
@@ -92,7 +92,7 @@ module.exports = {
 				}, 3000);
 				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | HOMIES | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.log(error);
+				errorLogger.log(error);
 				message.channel.send('Sorry, I was unable to give the special list.');
 			}
 		}

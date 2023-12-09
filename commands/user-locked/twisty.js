@@ -1,5 +1,5 @@
 const axios = require('axios');
-//  = require('../../// .js');
+const { errorLogger, commandLogger } = require('../../logger.js');
 const color = Math.floor(Math.random() * 16777215);
 const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1181750602154389655/twisty-1.gif',
@@ -63,11 +63,11 @@ module.exports = {
 					footer: { text: 'Use `gg.twisty` to get a new one!' },
 					timestamp: new Date(),
 				};
-				// (message.guild.name + ' | ' + message.author.username + ' | TWISTY | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | TWISTY | ' + message.channel.name + ' | ' + message.createdTimestamp);
 
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a sunset/sunrise image.');
 			}
 		}

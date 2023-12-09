@@ -1,4 +1,5 @@
 const cooldown = new Set();
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'hug',
@@ -27,9 +28,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				console.log(message.guild.name + ' | ' + message.author.username + ' | HUG | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | HUG | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to hug you :(');
 			}
 		}

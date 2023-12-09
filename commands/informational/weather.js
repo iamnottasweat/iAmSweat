@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
-const { commandLogger } = require('../../logger');
+const { commandLogger, errorLogger } = require('../../logger');
 
 module.exports = {
 	name: 'weather',
@@ -58,7 +58,7 @@ module.exports = {
 				}, 5000);
 				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | WEATHER | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get the weather.');
 			}
 		}

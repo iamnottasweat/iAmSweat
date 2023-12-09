@@ -1,5 +1,5 @@
 const cooldown = new Set();
-//  = require('../../// .js');
+const { errorLogger, commandLogger } = require('../../logger.js');
 const color = Math.floor(Math.random() * 16777215);
 
 const gifArray1 = [
@@ -73,9 +73,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 3000);
-				// (message.guild.name + ' | ' + message.author.username + ' | JAZZY | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | JAZZY | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send("Sorry, Jazzy is Jazzy, and Jazzy is gonna do Jazzy things... but you aren't her.");
 			}
 		}

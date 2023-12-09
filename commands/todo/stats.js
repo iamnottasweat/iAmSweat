@@ -1,5 +1,7 @@
+/*
 const axios = require('axios');
 const cooldown = new Set();
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180852862834720799/jake-shiny.gif',
@@ -74,20 +76,21 @@ module.exports = {
 					cooldown.delete(message.author.id);
 				}, 5000);
 				console.log(`${epicname}`);
-				console.log(message.guild.name + ' | ' + message.author.username + ' | STATS | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | STATS | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
 				if (error.response) {
-					console.log(error.response.data);
-					console.log(error.response.status);
-					console.log(error.response.headers);
+					errorLogger.log(error.response.data);
+					errorLogger.log(error.response.status);
+					errorLogger.log(error.response.headers);
 				} else if (error.request) {
-					console.log(error.request);
+					errorLogger.log(error.request);
 					message.channel.send('Sorry, I was unable to get stats.');
 				} else {
-					console.log('Error', error.message);
+					errorLogger.log('Error', error.message);
 				}
-				console.log(error.config);
+				errorLogger.log(error.config);
 			}
 		}
 	},
 };
+*/

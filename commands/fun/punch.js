@@ -1,6 +1,5 @@
 const cooldown = new Set();
-//  = require('../../// .js');
-
+const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'punch',
 	description: 'punch someone',
@@ -29,9 +28,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				// (message.guild.name + ' | ' + message.author.username + ' | PUNCH | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | PUNCH | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('You were unable to assault someone.');
 			}
 		}

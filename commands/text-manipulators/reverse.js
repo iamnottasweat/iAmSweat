@@ -1,5 +1,5 @@
 const cooldown = new Set();
-//  = require('../../// .js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'reverse',
@@ -25,9 +25,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				// (message.guild.name + ' | ' + message.author.username + ' | REVERSE | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | REVERSE | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to reverse the message.');
 			}
 		}

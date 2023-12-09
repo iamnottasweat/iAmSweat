@@ -1,4 +1,5 @@
 const cooldown = new Set();
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180852862834720799/jake-shiny.gif',
@@ -65,9 +66,9 @@ module.exports = {
 			setTimeout(() => {
 				cooldown.delete(message.author.id);
 			}, 5000);
-			console.log(message.guild.name + ' | ' + message.author.username + ' | TESTGIF | ' + message.channel.name + ' | ' + message.createdTimestamp);
+			commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | TESTGIF | ' + message.channel.name + ' | ' + message.createdTimestamp);
 		} catch (error) {
-			console.error(error);
+			errorLogger.error(error);
 			message.channel.send('Sorry.');
 		}
 	},

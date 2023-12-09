@@ -1,5 +1,5 @@
 const axios = require('axios');
-//  = require('../../// .js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 const color = Math.floor(Math.random() * 16777215);
 
 let commandUsage = {
@@ -48,11 +48,11 @@ module.exports = {
 					image: { url: aussie },
 					color: color,
 				};
-				// (message.guild.name + ' | ' + message.author.username + ' | EIMY |' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | EIMY |' + message.channel.name + ' | ' + message.createdTimestamp);
 
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get an aussie image.');
 			}
 		}

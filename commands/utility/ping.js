@@ -1,5 +1,6 @@
 const cooldown = new Set();
 const color = Math.floor(Math.random() * 16777215);
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'ping',
@@ -27,9 +28,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 3000);
-				console.log(message.guild.name + ' | ' + message.author.username + ' | PING | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | PING | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to pong.');
 			}
 		}

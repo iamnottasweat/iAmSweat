@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
-//  = require('../../// .js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 const gifArray = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140965029838878/chuck-norris-3.gif',
@@ -38,9 +38,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				// (message.guild.name + ' | ' + message.author.username + ' | CHUCK | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | CHUCK | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a Chuck Norris joke.');
 			}
 		}

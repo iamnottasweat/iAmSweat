@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
-//  = require('../../// .js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 function randomDate(start, end) {
 	return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -45,9 +45,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 3000);
-				// (message.guild.name + ' | ' + message.author.username + ' | RANDAPOD | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | RANDAPOD | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get the Astronomy Picture of the Day.');
 			}
 		}

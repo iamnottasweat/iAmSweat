@@ -1,5 +1,5 @@
 const axios = require('axios');
-//  = require('../../// .js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 const color = Math.floor(Math.random() * 16777215);
 
 let commandUsage = {
@@ -50,9 +50,9 @@ module.exports = {
 				};
 
 				message.channel.send({ embeds: [embed] });
-				// (message.guild.name + ' | ' + message.author.username + ' | LITT | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | LITT | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a flamingo image.');
 			}
 		}

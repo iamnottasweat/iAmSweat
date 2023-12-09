@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
+const { commandLogger, errorLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'apod',
@@ -9,9 +10,7 @@ module.exports = {
 			message.reply('Wait 24 hours before using this command again.');
 		} else {
 			try {
-				const resp = await axios.get(
-					`https://api.nasa.gov/planetary/apod?api_key=${process.env.nasaKey}`,
-				);
+				const resp = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.nasaKey}`);
 				const apod = resp.data;
 
 				message.delete().catch(console.error);
@@ -40,11 +39,10 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 86400000);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | APOD |' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.error(error);
-				message.channel.send(
-					'Sorry, I was unable to get the Astronomy Picture of the Day.',
-				);
+				errorLogger.error(error);
+				message.channel.send('Sorry, I was unable to get the Astronomy Picture of the Day.');
 			}
 		}
 	},

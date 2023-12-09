@@ -1,4 +1,5 @@
 const cooldown = new Set();
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'dm',
@@ -24,9 +25,9 @@ module.exports = {
 					setTimeout(() => {
 						cooldown.delete(message.author.id);
 					}, 3000);
-					console.log(message.guild.name + ' | ' + message.author.username + ' | DM | ' + message.channel.name + ' | ' + message.createdTimestamp);
+					commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | DM | ' + message.channel.name + ' | ' + message.createdTimestamp);
 				} catch (error) {
-					console.error(error);
+					errorLogger.error(error);
 					message.author.send('Failed to send the message.');
 				}
 			}

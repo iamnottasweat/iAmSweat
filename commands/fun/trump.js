@@ -1,7 +1,6 @@
 const axios = require('axios');
 const cooldown = new Set();
-//  = require('../../// .js');
-
+const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'trump',
 	description: 'returns a random trump quote',
@@ -33,9 +32,9 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				// (message.guild.name + ' | ' + message.author.username + ' | TRUMP | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | TRUMP | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				// .error(error);
+				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a trump quote.');
 			}
 		}
