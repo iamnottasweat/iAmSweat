@@ -1,0 +1,524 @@
+{
+	"log": [
+		{
+			"level": 30,
+			"time": 1701701374229,
+			"pid": 7289,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701701394187,
+			"pid": 7352,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701701478928,
+			"pid": 7464,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701704266048,
+			"pid": 7892,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701704293400,
+			"pid": 7960,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701704809092,
+			"pid": 8262,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701707687450,
+			"pid": 8818,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701709761798,
+			"pid": 9226,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": 1701717733024,
+			"pid": 10633,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T05:04:28.070Z",
+			"pid": 14326,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T09:28:02.249Z",
+			"pid": 17133,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T11:08:04.696Z",
+			"pid": 19081,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T11:55:58.999Z",
+			"pid": 19307,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T12:22:39.924Z",
+			"pid": 19472,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T12:31:03.191Z",
+			"pid": 19600,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T12:32:03.362Z",
+			"pid": 19661,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T12:32:29.177Z",
+			"pid": 19720,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T12:32:59.193Z",
+			"pid": 19777,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T14:05:47.172Z",
+			"pid": 20340,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T14:07:30.275Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T14:15:05.579Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Parsed Args:"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T14:15:20.888Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Parsed Args:"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T14:39:47.565Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1159353644785881100/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T14:41:09.519Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1159353644785881100/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T14:41:37.489Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1159353644785881100/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T14:46:21.136Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1159353644785881100/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T15:03:07.917Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Parsed Args:"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T15:04:09.535Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1159353644785881100/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T18:03:30.759Z",
+			"pid": 20461,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1175806653099167775/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T18:06:30.100Z",
+			"pid": 21311,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T18:07:12.879Z",
+			"pid": 21399,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 50,
+			"time": "2023-12-05T18:24:48.965Z",
+			"pid": 21399,
+			"hostname": "Connors-Mac-mini.local",
+			"err": {
+				"type": "DiscordAPIError",
+				"message": "Cannot send an empty message",
+				"stack": "DiscordAPIError[50006]: Cannot send an empty message\n    at handleErrors (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:722:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async SequentialHandler.runRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1120:23)\n    at async SequentialHandler.queueRequest (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:953:14)\n    at async _REST.request (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/@discordjs/rest/dist/index.js:1266:22)\n    at async TextChannel.send (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/node_modules/discord.js/src/structures/interfaces/TextBasedChannel.js:155:15)\n    at async Object.execute (/Users/iamnottasweat/Desktop/DISCORD/iAmSweat/commands/utility/ce.js:46:4)",
+				"requestBody": {
+					"files": [],
+					"json": {
+						"tts": false
+					}
+				},
+				"rawError": {
+					"type": "Object",
+					"message": "Cannot send an empty message",
+					"stack": "",
+					"code": 50006
+				},
+				"code": 50006,
+				"status": 400,
+				"method": "POST",
+				"url": "https://discord.com/api/v10/channels/1159353644785881100/messages"
+			},
+			"msg": "Cannot send an empty message"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T18:29:00.754Z",
+			"pid": 21655,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T18:31:40.826Z",
+			"pid": 21728,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T18:37:39.386Z",
+			"pid": 21808,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T18:43:06.294Z",
+			"pid": 21893,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T20:33:34.423Z",
+			"pid": 22415,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T20:34:19.669Z",
+			"pid": 22481,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T21:03:17.956Z",
+			"pid": 22667,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T21:04:06.059Z",
+			"pid": 22732,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T21:04:21.859Z",
+			"pid": 22792,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T23:44:08.112Z",
+			"pid": 23822,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-05T23:44:20.498Z",
+			"pid": 23894,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T00:05:45.836Z",
+			"pid": 24066,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T00:17:22.272Z",
+			"pid": 24264,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T00:19:35.479Z",
+			"pid": 24342,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T04:52:17.591Z",
+			"pid": 25934,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T04:52:51.949Z",
+			"pid": 26007,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T04:54:54.379Z",
+			"pid": 26030,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T10:00:34.813Z",
+			"pid": 27177,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": 30,
+			"time": "2023-12-06T22:30:32.583Z",
+			"pid": 29766,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": "info",
+			"number": 30,
+			"time": "2023-12-07T09:00:26.717Z",
+			"pid": 32827,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		},
+		{
+			"level": "info",
+			"number": 30,
+			"time": "2023-12-07T09:03:44.566Z",
+			"pid": 32907,
+			"hostname": "Connors-Mac-mini.local",
+			"msg": "Servers: Cody’s Crazies, lexxvalentine, Wherefore Art Thou Party At, Again?, Throwaway Server, Coco's Loco World, Lost, Mock Server, Game? Game., UPLOADS, 丂山乇卂ㄒ, Bot Test, 💧 iAmSweat 💧"
+		}
+	]
+}

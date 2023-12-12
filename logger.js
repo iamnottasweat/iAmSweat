@@ -15,9 +15,9 @@ const debugLoggerOptions = {
 	level: 'debug',
 };
 
-const commandLogger = pino(commandLoggerOptions, pino.destination('command-log.json'));
-const errorLogger = pino(errorLoggerOptions, pino.destination('error-log.json'));
-const debugLogger = pino(debugLoggerOptions, pino.destination('debug-log.json'));
+const commandLogger = pino(commandLoggerOptions, pino.destination('logs/commandLog.json'));
+const errorLogger = pino(errorLoggerOptions, pino.destination('logs/errorLog.json'));
+const debugLogger = pino(debugLoggerOptions, pino.destination('logs/debugLog.json'));
 
 module.exports = {
 	commandLogger,

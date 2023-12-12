@@ -9,11 +9,14 @@ log.json
 package-lock.json
 */package-lock.json/*
 config.json
-command-log.json
-debug-log.json
-error-log.json
+commandLog.json
+debugLog.json
+errorLog.json
 pretty-log.json
-readable-command-log.json
+pretty-errorLog.json
+pretty-debugLog.json
+pretty-commandLog.json
+readableCommandLog.json
 .DS_Store
 */.DS_Store/*
 *.DS_Store
@@ -42,6 +45,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+pretty_logs
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

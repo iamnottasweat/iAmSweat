@@ -11,7 +11,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon .",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+		"lint:fix": "eslint . --fix",
+		"pretty-logs": "cat log.json | pino-pretty >> pretty_logs/pretty-log.json && cat command-log.json | pino-pretty >> pretty_logs/pretty-commandLog.json && cat error-log.json | pino-pretty >> pretty_logs/pretty-errorLog.json && cat debug-log.json | pino-pretty >> pretty_logs/pretty-debugLog.json"
 	},
 	"keywords": [
 		"node.js",
