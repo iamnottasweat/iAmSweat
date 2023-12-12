@@ -1,1 +1,10 @@
 README.md
+README.md
+log.json
+logs/commandLog.json
+logs/debugLog.json
+logs/errorLog.json
+pretty_logs/pretty-commandLog.json
+pretty_logs/pretty-debugLog.json
+pretty_logs/pretty-errorLog.json
+pretty_logs/pretty-log.json
