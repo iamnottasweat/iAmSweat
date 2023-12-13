@@ -8,14 +8,13 @@ module.exports = {
 			message.reply('Wait 5 seconds before using this command again.');
 		} else {
 			try {
-				const user = message.author.username;
 				const target = message.mentions.users.first();
 				const color = Math.floor(Math.random() * 16777215);
 
 				message.delete().catch(console.error);
 
 				const embed = {
-					description: user ? `${message.author} ***jaw-rocked*** ${target}` : `${target}`,
+					description: target ? `${message.author} ***jaw-rocked*** ${target}` : `${message.author} ***is randomly assaulting someone***`,
 					color: color,
 					image: {
 						url: 'https://ssb.wiki.gallery/images/thumb/4/47/Captain_Falcon_Neutral_B_SSBU.gif/300px-Captain_Falcon_Neutral_B_SSBU.gif',

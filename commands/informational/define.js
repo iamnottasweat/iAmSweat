@@ -14,10 +14,12 @@ module.exports = {
 				const resp = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${messageContent}`);
 				const definition = resp.data[0].meanings[0].definitions[0].definition;
 				const color = Math.floor(Math.random() * 16777215);
+				const word = resp.data[0].word;
 
 				message.delete().catch(console.error);
 
 				const embed = {
+					title: word,
 					description: definition,
 					color: color,
 					footer: {

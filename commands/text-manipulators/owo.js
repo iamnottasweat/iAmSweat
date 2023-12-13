@@ -9,27 +9,25 @@ module.exports = {
 			message.reply('Wait 5 seconds before using this command again.');
 		} else {
 			try {
-				if (message.content.startsWith('gg.owo ')) {
-					let messageContent = message.content.replace('gg.owo ', '').trim();
-					messageContent = messageContent
-						.replace(/(?:r|l)/g, 'w')
-						.replace(/(?:R|L)/g, 'W')
-						.replace(/n([aeiou])/g, 'ny$1')
-						.replace(/N([aeiou])/g, 'Ny$1')
-						.replace(/N([AEIOU])/g, 'Ny$1')
-						.replace(/ove/g, 'uv');
+				let messageContent = message.content.replace(/^(;|gg\.)owo\s+/i, '').trim();
+				messageContent = messageContent
+					.replace(/(?:r|l)/g, 'w')
+					.replace(/(?:R|L)/g, 'W')
+					.replace(/n([aeiou])/g, 'ny$1')
+					.replace(/N([aeiou])/g, 'Ny$1')
+					.replace(/N([AEIOU])/g, 'Ny$1')
+					.replace(/ove/g, 'uv');
 
-					const color = Math.floor(Math.random() * 16777215);
+				const color = Math.floor(Math.random() * 16777215);
 
-					message.delete().catch(console.error);
+				message.delete().catch(console.error);
 
-					const embed = {
-						description: messageContent,
-						color: color,
-					};
+				const embed = {
+					description: messageContent,
+					color: color,
+				};
 
-					message.channel.send({ embeds: [embed] });
-				}
+				message.channel.send({ embeds: [embed] });
 				cooldown.add(message.author.id);
 				setTimeout(() => {
 					cooldown.delete(message.author.id);

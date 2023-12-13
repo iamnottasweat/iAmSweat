@@ -9,7 +9,7 @@ module.exports = {
 			message.reply('Wait 5 seconds before using this command again.');
 		} else {
 			try {
-				const messageContent = message.content.replace('gg.base64 ', '').trim();
+				const messageContent = message.content.replace('gg.base64 ', '').replace(';base64 ', '').trim();
 				const color = Math.floor(Math.random() * 16777215);
 
 				message.delete().catch(console.error);

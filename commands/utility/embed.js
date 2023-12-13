@@ -18,12 +18,10 @@ module.exports = {
 				'-t': {
 					pattern: /-t\s+"([^"]+)"/,
 					embedProperty: 'title',
-					defaultValue: 'Default Title',
 				},
 				'-d': {
 					pattern: /-d\s+"([^"]+)"/,
 					embedProperty: 'description',
-					defaultValue: 'Default Description',
 				},
 				'-c': {
 					pattern: /-c\s+"(#[0-9A-Fa-f]{6})"/,
@@ -75,10 +73,7 @@ module.exports = {
 				}
 			}
 
-			message.channel.send({ embeds: [embed] }).then(() => {
-				const userIdToPing = process.env.buzz;
-				return message.channel.send(`<@${userIdToPing}>`);
-			});
+			message.channel.send({ embeds: [embed] });
 
 			cooldown.add(message.author.id);
 			setTimeout(() => {
@@ -87,8 +82,8 @@ module.exports = {
 
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | ${command} | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {
-			errorLogger.error('An error occured while executing the ce command:', error);
-			message.reply('An error occured while executing the ce command. Please try again later.');
+			errorLogger.error('An error occurred while executing the ce command:', error);
+			message.reply('An error occurred while executing the ce command. Please try again later.');
 		}
 	},
 };

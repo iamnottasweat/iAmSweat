@@ -19,7 +19,7 @@ module.exports = {
 				if (!image_query) {
 					return message.channel.send('Enter an image name!');
 				}
-				const image_results = await google.scrape(image_query, 15);
+				const image_results = await google.scrape(image_query, 25);
 				if (image_results.length === 0) {
 					return message.channel.send('No images found.');
 				}

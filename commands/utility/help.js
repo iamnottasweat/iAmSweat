@@ -19,16 +19,16 @@ module.exports = {
 								value: 'Shows available command categories/commands',
 								inline: false,
 							},
-							//							{
-							//								name: '**gg.ce**',
-							//								value: 'Custom embed builder. Use `gg.cehelp` for more info.',
-							//								inline: false,
-							//                            },
-							//							{
-							//								name: '**gg.cehelp**',
-							//								value: 'Shows available arguments for use with `gg.ce`',
-							//								inline: false,
-							//							},
+							{
+								name: '**gg.embed**',
+								value: 'Custom embed builder. Use `gg.cehelp` for more info.',
+								inline: false,
+							},
+							{
+								name: '**gg.embedhelp**',
+								value: 'Shows available arguments for use with `gg.ce`',
+								inline: false,
+							},
 							{
 								name: '**gg.dm**',
 								value: 'DM a user. Usage: `gg.dm @user your_message_here`',
@@ -51,7 +51,7 @@ module.exports = {
 							},
 							{
 								name: '**gg.gif**',
-								value: 'Get a random gif',
+								value: 'Get a random gif. There is not a large variety but there are GIFs.',
 								inline: false,
 							},
 						],

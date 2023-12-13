@@ -1,5 +1,5 @@
-/*
 const cooldown = new Set();
+const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'embedhelp',
@@ -10,26 +10,12 @@ module.exports = {
 		} else {
 			try {
 				message.delete().catch(console.error);
-
-				const shorthandMap =
-					'`-t`: title\n`-d`: description\n`-img`: image\n`-f`: footer\n`-a`: author\n`-th`: thumbnail\n`-f1n`: field one name\n`-f1v`: field one value\n`-f2n`: field two name\n`-f2v` field two value\n\nFields up to `-f10n | -f10v` are available.\n\n**Example:**\n`gg.ce -t "This is a title" -d "This is a description" -f "This is a footer" -a "This is an author" -img "https://cdn.discordapp.com/attachments/1175806653099167775/1181446934792257536/adventure-time.gif" -th "https://cdn.discordapp.com/attachments/1175806653099167775/1181446934792257536/adventure-time.gif" -f1n "This is field one name" -f1v æThis is field one value" -f2n "This is field two name" -f2v "This is field two value"`';
-
+				const shorthandMap = '```js\n-t = "title"\n-d = "description"\n-img = "imageURL"\n-th = "thumbnailURL"\n-f = "footer"\n-a = "author"\n```';
+				const example1 = '```js\ngg.embed -t "This is a title" -d "This is a description" -f "This is a footer" -img "my_image_URL" -th "my_image_URL"\n```';
+				const exampleURL = '```fix\nhttps://cdn.discordapp.com/attachments/1184198610578059364/1184213442345832598/IMG_2368.png\n```';
 				const color = Math.floor(Math.random() * 16777215);
-
-				message.delete().catch(console.error);
-
-				const embed1 = {
-					description: shorthandMap,
-					color: color,
-					footer: {
-						text: 'Embed requested by ' + message.author.username,
-					},
-					thumbnail: {
-						url: 'https://cdn.discordapp.com/attachments/1175806653099167775/1181446934792257536/adventure-time.gif',
-					},
-					timestamp: new Date(),
-				};
-				const embed2 = {
+				const userMention = `I'm happy to help you, <@${message.author.id}>\nUse any combination of the options, but always at minimum have either a description or an image.\nThe following embed is made using ${example1}\nThese are the available options to use:\n${shorthandMap}\nHere is a URL you can use for testing:\n${exampleURL}`;
+				const embed = {
 					title: 'This is a title',
 					description: 'This is a description',
 					color: color,
@@ -42,30 +28,19 @@ module.exports = {
 					footer: {
 						text: 'This is a footer',
 					},
-					fields: [
-						{
-							name: 'This is field one name',
-							value: 'This is field one value',
-						},
-						{
-							name: 'This is field two name',
-							value: 'This is field two value',
-						},
-					],
 					timestamp: new Date(),
 				};
+				await message.channel.send({ embeds: [embed], content: userMention });
 
-				message.channel.send({ embeds: [embed1, embed2] });
 				cooldown.add(message.author.id);
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				console.log(message.guild.name + ' | ' + message.author.username + ' | CEHELP | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | EMBEDHELP | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
-				console.error(error);
-				message.channel.send('Sorry, I was unable to list the commands.');
+				errorLogger.error(error);
+				message.channel.send('Sorry, I was unable to help :(');
 			}
 		}
 	},
 };
-*/
