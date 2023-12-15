@@ -1,6 +1,8 @@
 const gifArray1 = [
+	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562500310671470/punch1.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562500960780308/punch2.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562501694791710/punch3.gif',
+	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562502374260766/punch4.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562502848229467/punch5.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562503422844958/punch6.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562504114897036/punch7.gif',

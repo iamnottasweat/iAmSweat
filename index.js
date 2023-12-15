@@ -20,6 +20,22 @@ for (const folder of commandFolders) {
 	}
 }
 
+const handleMessages = require('./events/messageCreate.js');
+handleMessages(client, prefixes);
+
+const eventsPath = path.join(__dirname, 'events');
+const eventFiles = fs.readdirSync(eventsPath).filter((file) => file.endsWith('.js'));
+
+for (const file of eventFiles) {
+	const filePath = path.join(eventsPath, file);
+	const event = require(filePath);
+	if (event.once) {
+		client.once(event.name, (...args) => event.execute(...args));
+	} else {
+		client.on(event.name, (...args) => event.execute(...args));
+	}
+}
+/*
 client.on('messageCreate', (message) => {
 	const prefix = prefixes.find((p) => message.content.startsWith(p));
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -38,12 +54,12 @@ client.on('messageCreate', (message) => {
 		message.reply('There was an error trying to execute that command!');
 	}
 });
-
+*/
 client.on(Events.Warn, (m) => console.warn(m));
 client.on(Events.Error, (m) => console.error(m));
-
+/*
 client.once(Events.ClientReady, (c) => {
 	console.log(`Ready! Logged in as ${c.user.tag}`);
 });
-
+*/
 client.login(process.env.token);
