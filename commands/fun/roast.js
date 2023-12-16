@@ -19,11 +19,11 @@ module.exports = {
 
 				const embed = {
 					description: user ? `${message.author} **roasted** ${user}:\n\n${roast}` : `${roast}`,
-					image: {
+					thumbnail: {
 						url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180650581241630760/roasted-oh.gif',
 					},
 					color: color,
-					footer: { text: 'Use `gg.roast` to get a new one!' },
+					footer: { text: 'Use `gg.roast | gg.roast @user` to get a new one!' },
 					timestamp: new Date(),
 				};
 

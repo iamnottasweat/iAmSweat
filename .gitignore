@@ -31,7 +31,7 @@ readableCommandLog.json
 */stats.js/*
 */stats.js
 test.js
-
+stats.js
 node_modules
 guide/.vuepress/.cache
 guide/.vuepress/.temp

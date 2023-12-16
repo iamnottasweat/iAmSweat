@@ -15,43 +15,43 @@ module.exports = {
 						name: 'Utility',
 						commands: [
 							{
-								name: '**gg.help**',
-								value: 'Shows available command categories/commands',
+								name: '`gg.help`',
+								value: '**Shows available command categories/commands**',
 								inline: false,
 							},
 							{
-								name: '**gg.embed**',
-								value: 'Custom embed builder. Use `gg.cehelp` for more info.',
+								name: '`gg.embed`',
+								value: '**Custom embed builder. Use** `gg.embedhelp` for more info.',
 								inline: false,
 							},
 							{
-								name: '**gg.embedhelp**',
-								value: 'Shows available arguments for use with `gg.ce`',
+								name: '`gg.embedhelp`',
+								value: '**Shows available arguments for use with** `gg.embed`',
 								inline: false,
 							},
 							{
-								name: '**gg.dm**',
-								value: 'DM a user. Usage: `gg.dm @user your_message_here`',
+								name: '`gg.dm`',
+								value: '**DM a user. Usage:** `gg.dm @user your_message_here`',
 								inline: false,
 							},
 							{
-								name: '**gg.hello**',
-								value: "Shouldn't be listed but it is",
+								name: '`gg.hello`',
+								value: "**Shouldn't be listed but it is**",
 								inline: false,
 							},
 							{
-								name: '**gg.hex**',
-								value: 'Gives a random hex color',
+								name: '`gg.hex`',
+								value: '**Gives a random hex color**',
 								inline: false,
 							},
 							{
-								name: '**gg.ping**',
-								value: 'See the bots latency',
+								name: '`gg.ping`',
+								value: '**See the bots latency**',
 								inline: false,
 							},
 							{
-								name: '**gg.gif**',
-								value: 'Get a random gif. There is not a large variety but there are GIFs.',
+								name: '`gg.gif`',
+								value: '**Get a random gif. There is not a large variety but there are GIFs.**',
 								inline: false,
 							},
 						],
@@ -60,53 +60,53 @@ module.exports = {
 						name: 'Fun',
 						commands: [
 							{
-								name: '**gg.affirmations**',
-								value: 'Sends a random affirmation. Usage: `gg.affirmations @user`',
+								name: '`gg.affirmations`',
+								value: '**Sends a random affirmation. Usage:** `gg.affirmations @user`',
 								inline: false,
 							},
 							{
-								name: '**gg.chuck**',
-								value: 'Random Chuck Norris snippets',
+								name: '`gg.chuck`',
+								value: '**Random Chuck Norris snippets**',
 								inline: false,
 							},
 							{
-								name: '**gg.hug**',
-								value: 'Get/Give a hug from the bot. Usage: `gg.hug | gg.hug @user`',
+								name: '`gg.hug`',
+								value: '**Get/Give a hug from the bot. Usage:** `gg.hug | gg.hug @user`',
 								inline: false,
 							},
 							{
-								name: '**gg.joke**',
-								value: 'Sends a random joke',
+								name: '`gg.joke`',
+								value: '**Sends a random joke**',
 								inline: false,
 							},
 							{
-								name: '**gg.pineapple**',
-								value: 'Find out for yourself.',
+								name: '`gg.pineapple`',
+								value: '**Find out for yourself.**',
 								inline: false,
 							},
 							{
-								name: '**gg.punch**',
-								value: 'Jaw-rock someone. Usage: `gg.punch @user`',
+								name: '`gg.punch`',
+								value: '**Jaw-rock someone. Usage:** `gg.punch | gg.punch @user`',
 								inline: false,
 							},
 							{
-								name: '**gg.quote**',
-								value: 'Sends a random quote',
+								name: '`gg.quote`',
+								value: '**Sends a random quote**',
 								inline: false,
 							},
 							{
-								name: '**gg.roast**',
-								value: 'Roast someone. Usage: `gg.roast | gg.roast @user`',
+								name: '`gg.roast`',
+								value: '**Roast someone. Usage:** `gg.roast | gg.roast @user`',
 								inline: false,
 							},
 							{
-								name: '**gg.trump**',
-								value: 'Trump, Donald J.',
+								name: '`gg.trump`',
+								value: '**Trump, Donald J.**',
 								inline: false,
 							},
 							{
-								name: '**gg.yomama**',
-								value: 'Sends a random Yo Momma joke. Usage: `gg.yomama | gg.yomama @user`',
+								name: '`gg.yomama`',
+								value: '**Sends a random Yo Momma joke. Usage:** `gg.yomama | gg.yomama @user`',
 								inline: false,
 							},
 						],
@@ -115,33 +115,33 @@ module.exports = {
 						name: 'Informational',
 						commands: [
 							{
-								name: '**gg.apod**',
-								value: 'Random Astronomy Picture of the Day',
+								name: '`gg.apod`',
+								value: '**Random Astronomy Picture of the Day**',
 								inline: false,
 							},
 							{
-								name: '**gg.randapod**',
-								value: 'Random Astronomy Picture of the Day',
+								name: '`gg.randapod`',
+								value: '**Random Astronomy Picture of the Day**',
 								inline: false,
 							},
 							{
-								name: '**gg.dogfact**',
-								value: 'Random Dog Fact',
+								name: '`gg.dogfact`',
+								value: '**Random Dog Fact**',
 								inline: false,
 							},
 							{
-								name: '**gg.define**',
-								value: 'Define a word. Usage: `gg.define your_word_here`',
+								name: '`gg.define`',
+								value: '**Define a word. Usage:** `gg.define your_word_here`',
 								inline: false,
 							},
 							{
-								name: '**gg.nasa**',
-								value: 'Random NASA Picture',
+								name: '`gg.nasa`',
+								value: '**Random NASA Picture**',
 								inline: false,
 							},
 							{
-								name: '**gg.weather**',
-								value: 'Get weather info for a location. Usage: `gg.weather your_location_here`',
+								name: '`gg.weather`',
+								value: '**Get weather info for a location. Usage:** `gg.weather your_location_here`',
 								inline: false,
 							},
 						],
@@ -150,28 +150,28 @@ module.exports = {
 						name: 'Text',
 						commands: [
 							{
-								name: '**gg.base64**',
-								value: 'Convert text to base64. Usage: `gg.base64 your_text_here`',
+								name: '`gg.base64`',
+								value: '**Convert text to base64. Usage:** `gg.base64 your_text_here`',
 								inline: false,
 							},
 							{
-								name: '**gg.binary**',
-								value: 'Convert text to binary. Usage: `gg.binary your_text_here`',
+								name: '`gg.binary`',
+								value: '**Convert text to binary. Usage:** `gg.binary your_text_here`',
 								inline: false,
 							},
 							{
-								name: '**gg.reverse**',
-								value: 'Reverse text. Usage: `gg.reverse your_text_here`',
+								name: '`gg.reverse`',
+								value: '**Reverse text. Usage:** `gg.reverse your_text_here`',
 								inline: false,
 							},
 							{
-								name: '**gg.leet**',
-								value: 'Convert text to leet speak. Usage: `gg.leet your_text_here`',
+								name: '`gg.leet`',
+								value: '**Convert text to leet speak. Usage:** `gg.leet your_text_here`',
 								inline: false,
 							},
 							{
-								name: '**gg.owo**',
-								value: 'Convert text to OwO. Usage: `gg.owo your_text_here`',
+								name: '`gg.owo`',
+								value: '**Convert text to OwO. Usage:** `gg.owo your_text_here`',
 								inline: false,
 							},
 						],
@@ -180,18 +180,18 @@ module.exports = {
 						name: 'Images',
 						commands: [
 							{
-								name: '**gg.dog**',
-								value: 'Random dog image',
+								name: '`gg.dog`',
+								value: '**Random dog image**',
 								inline: false,
 							},
 							{
-								name: '**gg.pikapika**',
-								value: 'Pikachu!',
+								name: '`gg.pikapika`',
+								value: '**Pikachu!**',
 								inline: false,
 							},
 							{
-								name: '**gg.img**',
-								value: 'Sends an image. Usage: `gg.img your_query_here`',
+								name: '`gg.img`',
+								value: '**Sends an image. Usage:** `gg.img your_query_here`',
 								inline: false,
 							},
 						],
@@ -218,9 +218,6 @@ module.exports = {
 							}),
 						},
 						timestamp: new Date(),
-						image: {
-							url: 'https://media.discordapp.net/attachments/1175806653099167775/1178531508651294771/image.png',
-						},
 					};
 
 					message.channel.send({ embeds: [helpEmbed] });
@@ -251,9 +248,6 @@ module.exports = {
 							},
 							fields: category.commands,
 							timestamp: new Date(),
-							image: {
-								url: 'https://media.discordapp.net/attachments/1175806653099167775/1178531508651294771/image.png',
-							},
 						};
 
 						message.channel.send({ embeds: [embed] });

@@ -12,7 +12,7 @@ module.exports = {
 	description: 'returns an image',
 	async execute(message, args) {
 		if (cooldown.has(message.author.id)) {
-			message.reply('Wait 60 seconds before using this command again.');
+			message.reply('Wait 1 seconds before using this command again.');
 		} else {
 			try {
 				const image_query = args.join(' ');
@@ -35,7 +35,7 @@ module.exports = {
 						},
 						color: color,
 						footer: {
-							text: 'Use `gg.img` to get a new one!',
+							text: 'Use `gg.img <image_name>` to get a new one!',
 						},
 						timestamp: new Date(),
 					};
@@ -45,7 +45,7 @@ module.exports = {
 				cooldown.add(message.author.id);
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
-				}, 60000);
+				}, 1000);
 				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | IMG | ' + message.channel.name + ' | ' + message.createdTimestamp);
 			} catch (error) {
 				errorLogger.error(error);

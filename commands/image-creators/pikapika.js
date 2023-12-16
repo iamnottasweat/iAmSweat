@@ -20,7 +20,7 @@ module.exports = {
 					},
 					color: color,
 					footer: {
-						text: 'Use `gg.pikapika` to get a new one!',
+						text: 'Use `gg.pikapika` to get Pikachu again!',
 					},
 					timestamp: new Date(),
 				};

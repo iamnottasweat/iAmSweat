@@ -7,7 +7,26 @@ const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562503422844958/punch6.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562504114897036/punch7.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562510754488430/punch8.gif',
+	'https://cdn.discordapp.com/attachments/1184198610578059364/1185194580912648223/punch9.gif',
 ];
+
+const usedGifs = new Set();
+const gifHistorySize = 8;
+function getRandomGif(gifArray) {
+	let gif;
+	do {
+		gif = gifArray[Math.floor(Math.random() * gifArray.length)];
+	} while (usedGifs.has(gif));
+	usedGifs.add(gif);
+	if (usedGifs.size > gifHistorySize) {
+		// Convert Set to Array to easily remove the first (oldest) element.
+		const oldestGif = Array.from(usedGifs).shift();
+		usedGifs.delete(oldestGif);
+	}
+	return gif;
+}
+
+const randomGif = getRandomGif(gifArray1);
 
 const cooldown = new Set();
 const { commandLogger, errorLogger } = require('../../logger.js');
@@ -21,7 +40,7 @@ module.exports = {
 			try {
 				const target = message.mentions.users.first();
 				const color = Math.floor(Math.random() * 16777215);
-				const image = gifArray1[Math.floor(Math.random() * gifArray1.length)];
+				const image = randomGif;
 
 				message.delete().catch(console.error);
 
@@ -31,7 +50,7 @@ module.exports = {
 					image: {
 						url: image,
 					},
-					footer: { text: 'Use `gg.punch` to give another punch!' },
+					footer: { text: 'Use `gg.punch | gg.punch @user` to give another punch!' },
 					timestamp: new Date(),
 				};
 				message.channel.send({ embeds: [embed] });

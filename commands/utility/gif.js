@@ -42,6 +42,25 @@ const gifArray2 = [
 	'https://media.discordapp.net/attachments/1175806653099167775/1179194258801041429/gun-fight.gif',
 ];
 
+const usedGifs = new Set();
+const gifHistorySize = 8;
+
+function getRandomGif(gifArray) {
+	let gif;
+	do {
+		gif = gifArray[Math.floor(Math.random() * gifArray.length)];
+	} while (usedGifs.has(gif));
+
+	usedGifs.add(gif);
+	if (usedGifs.size > gifHistorySize) {
+		// Convert Set to Array to easily remove the first (oldest) element.
+		const oldestGif = Array.from(usedGifs).shift();
+		usedGifs.delete(oldestGif);
+	}
+
+	return gif;
+}
+
 module.exports = {
 	name: 'gif',
 	description: 'Get a gif',
@@ -50,14 +69,19 @@ module.exports = {
 			if (cooldown.has(message.author.id)) {
 				return message.reply('Wait 5 seconds before using this command again.');
 			}
-			const image = gifArray1[Math.floor(Math.random() * gifArray1.length)] || gifArray2[Math.floor(Math.random() * gifArray2.length)];
+
+			const combinedGifArray = [...gifArray1, ...gifArray2];
+			const randomGif = getRandomGif(combinedGifArray);
 
 			const color = Math.floor(Math.random() * 16777215);
 
 			const embed = {
 				timestamp: new Date(),
-				image: { url: image },
+				image: { url: randomGif },
 				color: color,
+				footer: {
+					text: 'Use `gg.gif` to get a new one!',
+				},
 			};
 
 			await message.delete().catch(console.error);

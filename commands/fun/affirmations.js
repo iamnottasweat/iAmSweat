@@ -21,7 +21,7 @@ module.exports = {
 				const embed = {
 					description: user ? `${message.author} **has kind words for** ${user}:\n\n${affirmation}` : `${affirmation}`,
 					color: color,
-					footer: { text: 'Use `gg.affirmations` to get a new one!' },
+					footer: { text: 'Use `gg.affirmations @user` to get a new one!' },
 					timestamp: new Date(),
 					image: {
 						url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180852867083538513/statsgif4.gif',

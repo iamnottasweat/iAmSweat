@@ -22,6 +22,9 @@ module.exports = {
 					description: `Bot Evaluation Time: **${botEvaluationTime}**ms\nLatency: **${latency}**ms.\nAPI Latency: **${API_latency}**ms.`,
 					color: color,
 					timestamp: new Date(),
+					footer: {
+						text: 'Use `gg.ping` to get a new latency check!',
+					},
 				};
 				sentMessage.edit({ content: '', embeds: [embed] });
 				cooldown.add(message.author.id);
