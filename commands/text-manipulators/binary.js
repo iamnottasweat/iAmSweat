@@ -29,7 +29,7 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | BINARY | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | BINARY | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to convert the text to binary.');

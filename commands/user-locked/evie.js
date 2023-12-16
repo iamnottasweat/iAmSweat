@@ -49,7 +49,7 @@ module.exports = {
 					image: { url: corgi },
 					color: color,
 				};
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | EVIE |' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | EVIE | ${message.channel.name} | ${message.createdTimestamp}`);
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {
 				errorLogger.error(error);

@@ -73,7 +73,7 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 3000);
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | JAZZY | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | JAZZY | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
 				message.channel.send("Sorry, Jazzy is Jazzy, and Jazzy is gonna do Jazzy things... but you aren't her.");

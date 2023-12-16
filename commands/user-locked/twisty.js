@@ -63,7 +63,7 @@ module.exports = {
 					footer: { text: 'Use `gg.twisty` to get a new one!' },
 					timestamp: new Date(),
 				};
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | TWISTY | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | TWISTY | ${message.channel.name} | ${message.createdTimestamp}`);
 
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {

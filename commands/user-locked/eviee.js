@@ -49,7 +49,7 @@ module.exports = {
 					color: color,
 				};
 
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | EVIEE | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | EVIEE | ${message.channel.name} | ${message.createdTimestamp}`);
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {
 				errorLogger.error(error);

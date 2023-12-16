@@ -48,7 +48,7 @@ module.exports = {
 					image: { url: tanks },
 					color: color,
 				};
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | BUZZ |' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | BUZZZ | ${message.channel.name} | ${message.createdTimestamp}`);
 
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {

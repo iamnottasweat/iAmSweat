@@ -261,7 +261,7 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 3000);
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | HELP | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | HELP | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
 				message.channel.send('Sorry, I encountered an error. '`${error.message}`, 'Try again later.');

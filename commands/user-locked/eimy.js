@@ -48,7 +48,7 @@ module.exports = {
 					image: { url: aussie },
 					color: color,
 				};
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | EIMY |' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | EIMY | ${message.channel.name} | ${message.createdTimestamp}`);
 
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {

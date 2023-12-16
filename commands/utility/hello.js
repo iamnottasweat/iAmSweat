@@ -21,7 +21,7 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 3000);
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | HELLO | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | HELLO | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to say hello.');

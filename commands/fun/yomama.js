@@ -29,7 +29,7 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | YOMAMA | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | YOMOMAMA | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a yomama joke.');

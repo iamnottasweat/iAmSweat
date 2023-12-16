@@ -34,7 +34,7 @@ module.exports = {
 				setTimeout(() => {
 					cooldown.delete(message.author.id);
 				}, 5000);
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | AFFIRMATIONS | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | AFFIRMATIONS | ${message.channel.name} | ${message.createdTimestamp}`);
 				commandLogger.debug('Affirmations command executed.');
 			} catch (error) {
 				errorLogger.error('Error executing affirmation command: ' + error);

@@ -50,7 +50,7 @@ module.exports = {
 				};
 
 				message.channel.send({ embeds: [embed] });
-				commandLogger.info(message.guild.name + ' | ' + message.author.username + ' | KAREN | ' + message.channel.name + ' | ' + message.createdTimestamp);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | KAREN | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
 				message.channel.send('Sorry, I was unable to get a cactus image.');
