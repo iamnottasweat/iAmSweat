@@ -82,8 +82,8 @@ module.exports = {
 
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | ${command} | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {
-			errorLogger.error('An error occurred while executing the ce command:', error);
-			message.reply('An error occurred while executing the ce command. Please try again later.');
+			errorLogger.error('An error occurred while executing the embed command:', error);
+			message.reply('An error occurred while executing the embed command. Please try again later.');
 		}
 	},
 };

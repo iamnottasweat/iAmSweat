@@ -11,7 +11,7 @@ const gifArray1 = [
 ];
 
 const usedGifs = new Set();
-const gifHistorySize = 8;
+const gifHistorySize = 5;
 function getRandomGif(gifArray) {
 	let gif;
 	do {

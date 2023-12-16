@@ -28,8 +28,7 @@ readableCommandLog.json
 */.log.*/*
 *.log-*
 */.log-*/*
-*/stats.js/*
-*/stats.js
+*/user-locked/*
 test.js
 stats.js
 node_modules
@@ -38,6 +37,7 @@ guide/.vuepress/.temp
 guide/.vuepress/dist
 .vscode/settings.json
 .DS_Store
+*/commands/user-locked
 
 # Logs
 logs
