@@ -1,16 +1,11 @@
-const cooldown = new Set();
 const { command } = require('yargs');
 const { commandLogger, errorLogger } = require('../../logger');
 
 module.exports = {
 	name: 'embed',
 	description: 'Creates a custom embed with optional arguments',
+	cooldown: 5,
 	execute(message, args) {
-		if (cooldown.has(message.author.id)) {
-			message.reply('Wait 15 seconds before using this command again.');
-			return;
-		}
-
 		try {
 			const argString = args.join(' ');
 
@@ -74,12 +69,6 @@ module.exports = {
 			}
 
 			message.channel.send({ embeds: [embed] });
-
-			cooldown.add(message.author.id);
-			setTimeout(() => {
-				cooldown.delete(message.author.id);
-			}, 15000);
-
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | ${command} | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {
 			errorLogger.error('An error occurred while executing the embed command:', error);

@@ -8,10 +8,26 @@ const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562504114897036/punch7.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1184562510754488430/punch8.gif',
 	'https://cdn.discordapp.com/attachments/1184198610578059364/1185194580912648223/punch9.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534654204346408/patrick-punching.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534654590230629/punch10.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534654967726190/punch11.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534655303254046/santa-punching-bag.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534655710109716/stepbrothers-pummel-punch.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534656091799582/weliton-amogos.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534662647484426/anime-fight.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534663427633162/anime-naruto.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534663977078844/anime-punch-anime.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534664614608926/anime-smash.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534664983720026/beating-up-beating-up-lilo.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534665440890880/boxing-tom-and-jerry.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534666376216627/crackhead-homeless-man.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534667076669511/hasbulla-hasbik.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534667579981844/lulugifs-charlie-brown.gif',
+	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534668200751204/one-punch-man.gif',
 ];
 
 const usedGifs = new Set();
-const gifHistorySize = 5;
+const gifHistorySize = 20;
 function getRandomGif(gifArray) {
 	let gif;
 	do {
@@ -26,43 +42,33 @@ function getRandomGif(gifArray) {
 	return gif;
 }
 
-const randomGif = getRandomGif(gifArray1);
-
-const cooldown = new Set();
 const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'punch',
 	description: 'punch someone',
+	cooldown: 5,
 	execute(message) {
-		if (cooldown.has(message.author.id)) {
-			message.reply('Wait 5 seconds before using this command again.');
-		} else {
-			try {
-				const target = message.mentions.users.first();
-				const color = Math.floor(Math.random() * 16777215);
-				const image = randomGif;
+		try {
+			const target = message.mentions.users.first();
+			const color = Math.floor(Math.random() * 16777215);
+			const image = getRandomGif(gifArray1);
 
-				message.delete().catch(console.error);
+			message.delete().catch(console.error);
 
-				const embed = {
-					description: target ? `${message.author} ***jaw-rocked*** ${target}` : `${message.author} ***is randomly assaulting someone***`,
-					color: color,
-					image: {
-						url: image,
-					},
-					footer: { text: 'Use `gg.punch | gg.punch @user` to give another punch!' },
-					timestamp: new Date(),
-				};
-				message.channel.send({ embeds: [embed] });
-				cooldown.add(message.author.id);
-				setTimeout(() => {
-					cooldown.delete(message.author.id);
-				}, 5000);
-				commandLogger.info(`${message.guild.name} | ${message.author.username} | PUNCH | ${message.channel.name} | ${message.createdTimestamp}`);
-			} catch (error) {
-				errorLogger.error(error);
-				message.channel.send('You were unable to assault someone.');
-			}
+			const embed = {
+				description: target ? `${message.author} ***jaw-rocked*** ${target}` : `${message.author} ***is randomly assaulting someone***`,
+				color: color,
+				image: {
+					url: image,
+				},
+				footer: { text: 'Use `gg.punch | gg.punch @user` to give another punch!' },
+				timestamp: new Date(),
+			};
+			message.channel.send({ embeds: [embed] });
+			commandLogger.info(`${message.guild.name} | ${message.author.username} | PUNCH | ${message.channel.name} | ${message.createdTimestamp}`);
+		} catch (error) {
+			errorLogger.error(error);
+			message.channel.send('You were unable to assault someone.');
 		}
 	},
 };

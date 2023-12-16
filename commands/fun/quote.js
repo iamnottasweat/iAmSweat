@@ -4,6 +4,7 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'quote',
 	description: 'returns a random quote',
+	cooldown: 5,
 	async execute(message) {
 		if (cooldown.has(message.author.id)) {
 			message.reply('Wait 5 seconds before using this command again.');

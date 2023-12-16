@@ -1,42 +1,34 @@
-const cooldown = new Set();
 const color = Math.floor(Math.random() * 16777215);
 const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'hex',
 	description: 'returns a random hex color',
+	cooldown: 5,
 	execute(message) {
-		if (cooldown.has(message.author.id)) {
-			message.reply('Wait 3 seconds before using this command again.');
-		} else {
-			try {
-				const hexColor = Math.floor(Math.random() * 16777215).toString(16);
-				const decimalColor = parseInt(hexColor, 16);
+		try {
+			const hexColor = Math.floor(Math.random() * 16777215).toString(16);
+			const decimalColor = parseInt(hexColor, 16);
 
-				message.delete().catch(console.error);
+			message.delete().catch(console.error);
 
-				const embed = {
-					description: `__**Random Hex Color**__\n\n**HEX:** __***#${hexColor}***__\n\n**DECIMAL:** __***${decimalColor}***__`,
-					color: color,
-					thumbnail: {
-						url: `https://singlecolorimage.com/get/${hexColor}/400x400`,
-					},
-					footer: {
-						text: 'Use `gg.hex` to get a new one!',
-					},
-					timestamp: new Date(),
-				};
+			const embed = {
+				description: `__**Random Hex Color**__\n\n**HEX:** __***#${hexColor}***__\n\n**DECIMAL:** __***${decimalColor}***__`,
+				color: color,
+				thumbnail: {
+					url: `https://singlecolorimage.com/get/${hexColor}/400x400`,
+				},
+				footer: {
+					text: 'Use `gg.hex` to get a new one!',
+				},
+				timestamp: new Date(),
+			};
 
-				message.channel.send({ embeds: [embed] });
-				cooldown.add(message.author.id);
-				setTimeout(() => {
-					cooldown.delete(message.author.id);
-				}, 3000);
-				commandLogger.info(`${message.guild.name} | ${message.author.username} | HEX | ${message.channel.name} | ${message.createdTimestamp}`);
-			} catch (error) {
-				errorLogger.error(error);
-				message.channel.send('Sorry, I was unable to get a hex color.');
-			}
+			message.channel.send({ embeds: [embed] });
+			commandLogger.info(`${message.guild.name} | ${message.author.username} | HEX | ${message.channel.name} | ${message.createdTimestamp}`);
+		} catch (error) {
+			errorLogger.error(error);
+			message.channel.send('Sorry, I was unable to get a hex color.');
 		}
 	},
 };

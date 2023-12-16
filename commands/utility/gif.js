@@ -1,4 +1,3 @@
-const cooldown = new Set();
 const { errorLogger, commandLogger } = require('../../logger.js');
 
 const gifArray1 = [
@@ -43,7 +42,7 @@ const gifArray2 = [
 ];
 
 const usedGifs = new Set();
-const gifHistorySize = 8;
+const gifHistorySize = 25;
 
 function getRandomGif(gifArray) {
 	let gif;
@@ -64,12 +63,9 @@ function getRandomGif(gifArray) {
 module.exports = {
 	name: 'gif',
 	description: 'Get a gif',
+	cooldown: 5,
 	async execute(message) {
 		try {
-			if (cooldown.has(message.author.id)) {
-				return message.reply('Wait 5 seconds before using this command again.');
-			}
-
 			const combinedGifArray = [...gifArray1, ...gifArray2];
 			const randomGif = getRandomGif(combinedGifArray);
 
@@ -86,10 +82,6 @@ module.exports = {
 
 			await message.delete().catch(console.error);
 			await message.channel.send({ embeds: [embed] });
-			cooldown.add(message.author.id);
-			setTimeout(() => {
-				cooldown.delete(message.author.id);
-			}, 5000);
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | GIF | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {
 			errorLogger.error(error);
