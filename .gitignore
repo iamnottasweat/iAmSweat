@@ -38,6 +38,7 @@ guide/.vuepress/dist
 .vscode/settings.json
 .DS_Store
 */commands/user-locked
+sub-list.csv
 
 # Logs
 logs
