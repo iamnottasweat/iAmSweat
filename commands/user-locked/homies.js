@@ -65,6 +65,16 @@ module.exports = {
 						inline: true,
 					},
 					{
+						name: `gg.karenn`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
+						name: `gg.karennn`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
 						name: `gg.twisty`,
 						value: '\u200b',
 						inline: true,
