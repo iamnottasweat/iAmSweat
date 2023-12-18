@@ -47,6 +47,10 @@ module.exports = {
 				const embed = {
 					image: { url: panda },
 					color: color,
+					footer: {
+						text: "I'm a banana. ",
+					},
+					timestamp: new Date(),
 				};
 
 				commandLogger.info(`${message.guild.name} | ${message.author.username} | EVIEE | ${message.channel.name} | ${message.createdTimestamp}`);

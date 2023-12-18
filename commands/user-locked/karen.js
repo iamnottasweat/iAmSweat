@@ -47,6 +47,10 @@ module.exports = {
 				const embed = {
 					image: { url: cactus },
 					color: color,
+					footer: {
+						text: 'I am cactus, as cactus is me. We are one.',
+					},
+					timestamp: new Date(),
 				};
 
 				message.channel.send({ embeds: [embed] });

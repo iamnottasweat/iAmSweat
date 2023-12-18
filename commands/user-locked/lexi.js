@@ -47,6 +47,10 @@ module.exports = {
 				const embed = {
 					image: { url: otter },
 					color: color,
+					footer: {
+						text: 'I bust shells on my belly and eat them.',
+					},
+					timestamp: new Date(),
 				};
 
 				message.channel.send({ embeds: [embed] });

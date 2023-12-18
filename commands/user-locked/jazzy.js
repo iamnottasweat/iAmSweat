@@ -1,4 +1,3 @@
-const cooldown = new Set();
 const { errorLogger, commandLogger } = require('../../logger.js');
 const color = Math.floor(Math.random() * 16777215);
 
@@ -22,9 +21,6 @@ const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180853101838733362/statsgif13.gif',
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180853102354636870/statsgif14.gif',
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180853102753087508/statsgif15.gif',
-];
-
-const gifArray2 = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180853211914047508/statsgif16.gif',
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180853212518023219/statsgif17.gif',
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1180853212853575741/statsgif18.gif',
@@ -43,41 +39,56 @@ const gifArray2 = [
 	'https://media.discordapp.net/attachments/1175806653099167775/1179194258801041429/gun-fight.gif',
 ];
 
-const allowedUserIds = [process.env.pistol, process.env.sweat];
+const allowedUserId1 = process.env.pistol;
+const allowedUserId2 = process.env.sweat;
+
+const usedGifs = new Set();
+const gifHistorySize = 30;
+function getRandomGif(gifArray) {
+	let gif;
+	do {
+		gif = gifArray[Math.floor(Math.random() * gifArray.length)];
+	} while (usedGifs.has(gif));
+	usedGifs.add(gif);
+	if (usedGifs.size > gifHistorySize) {
+		// Convert Set to Array to easily remove the first (oldest) element.
+		const oldestGif = Array.from(usedGifs).shift();
+		usedGifs.delete(oldestGif);
+	}
+	return gif;
+}
 
 module.exports = {
 	name: 'jazzy',
-	description: 'punch pew pew pew',
+	description: 'pew pew pew',
+	cooldown: 5,
 	async execute(message) {
+		const allowedUserIds = [allowedUserId1, allowedUserId2];
+
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');
 			return;
 		}
-		const image = gifArray1[Math.floor(Math.random() * gifArray1.length)] || gifArray2[Math.floor(Math.random() * gifArray2.length)];
+		const image = getRandomGif(gifArray1);
+		try {
+			message.delete().catch(console.error);
 
-		if (cooldown.has(message.author.id)) {
-			message.reply('Wait 3 seconds before using this command again.');
-		} else {
-			try {
-				message.delete().catch(console.error);
-
-				const embed = {
-					description: '# [PEW PEW PEW](https://fortnitetracker.com/profile/all/Babygirljaz1)\n\n⬆️ Enjoy the link! ⬆️',
-					color: color,
-					image: {
-						url: image,
-					},
-				};
-				message.channel.send({ embeds: [embed] });
-				cooldown.add(message.author.id);
-				setTimeout(() => {
-					cooldown.delete(message.author.id);
-				}, 3000);
-				commandLogger.info(`${message.guild.name} | ${message.author.username} | JAZZY | ${message.channel.name} | ${message.createdTimestamp}`);
-			} catch (error) {
-				errorLogger.error(error);
-				message.channel.send("Sorry, Jazzy is Jazzy, and Jazzy is gonna do Jazzy things... but you aren't her.");
-			}
+			const embed = {
+				description: '# [PEW PEW PEW](https://fortnitetracker.com/profile/all/Babygirljaz1)\n\n⬆️ Enjoy the link! ⬆️',
+				color: color,
+				image: {
+					url: image,
+				},
+				footer: {
+					text: 'so do yaa like jaaaazzzzz?',
+				},
+				timestamp: new Date(),
+			};
+			message.channel.send({ embeds: [embed] });
+			commandLogger.info(`${message.guild.name} | ${message.author.username} | JAZZY | ${message.channel.name} | ${message.createdTimestamp}`);
+		} catch (error) {
+			errorLogger.error(error);
+			message.channel.send("Sorry, Jazzy is Jazzy, and Jazzy is gonna do Jazzy things... but you aren't her.");
 		}
 	},
 };

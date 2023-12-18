@@ -47,6 +47,10 @@ module.exports = {
 				const embed = {
 					image: { url: aussie },
 					color: color,
+					footer: {
+						text: 'alfa_2_who? alfa_2_yuu!',
+					},
+					timestamp: new Date(),
 				};
 				commandLogger.info(`${message.guild.name} | ${message.author.username} | EIMY | ${message.channel.name} | ${message.createdTimestamp}`);
 

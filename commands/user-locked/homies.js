@@ -82,7 +82,7 @@ module.exports = {
 						text: "The Homies' Special List",
 					},
 					image: {
-						url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1179623658709336135/adventure-time.gif',
+						url: 'https:dn.discordapp.com/attachments/1159353644785881100/1179623658709336135/adventure-time.gif',
 					},
 				};
 				message.channel.send({ embeds: [embed] });

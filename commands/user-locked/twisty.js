@@ -26,6 +26,22 @@ setInterval(() => {
 
 const allowedUserIds = [process.env.twisty, process.env.sweat];
 
+const usedGifs = new Set();
+const gifHistorySize = 8;
+function getRandomGif(gifArray) {
+	let gif;
+	do {
+		gif = gifArray[Math.floor(Math.random() * gifArray.length)];
+	} while (usedGifs.has(gif));
+	usedGifs.add(gif);
+	if (usedGifs.size > gifHistorySize) {
+		// Convert Set to Array to easily remove the first (oldest) element.
+		const oldestGif = Array.from(usedGifs).shift();
+		usedGifs.delete(oldestGif);
+	}
+	return gif;
+}
+
 module.exports = {
 	name: 'twisty',
 	description: 'returns a random image of a twisty',
@@ -51,7 +67,7 @@ module.exports = {
 			try {
 				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=ice-cream&client_id=${process.env.accessKey}`);
 				const icecream = resp.data.urls.small;
-				const thumbnail = gifArray1[Math.floor(Math.random() * gifArray1.length)];
+				const thumbnail = getRandomGif(gifArray1);
 
 				message.delete().catch(console.error);
 

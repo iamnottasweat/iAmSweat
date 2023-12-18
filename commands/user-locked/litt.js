@@ -47,6 +47,10 @@ module.exports = {
 				const embed = {
 					image: { url: flamingo },
 					color: color,
+					footer: {
+						text: "it's an FOF.. flock-of-flamingos.",
+					},
+					timestamp: new Date(),
 				};
 
 				message.channel.send({ embeds: [embed] });

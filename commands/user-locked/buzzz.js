@@ -47,6 +47,10 @@ module.exports = {
 				const embed = {
 					image: { url: tanks },
 					color: color,
+					footer: {
+						text: 'buzzzzz buzzzzzzzzz buzzzzzzzzzzz',
+					},
+					timestamp: new Date(),
 				};
 				commandLogger.info(`${message.guild.name} | ${message.author.username} | BUZZZ | ${message.channel.name} | ${message.createdTimestamp}`);
 

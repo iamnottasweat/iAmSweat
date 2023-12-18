@@ -45,9 +45,12 @@ module.exports = {
 				message.delete().catch(console.error);
 
 				const embed = {
-					title: 'Random Corgi Image',
 					image: { url: corgi },
 					color: color,
+					footer: {
+						text: 'yellow, peelable, edible: what am I?',
+					},
+					timestamp: new Date(),
 				};
 				commandLogger.info(`${message.guild.name} | ${message.author.username} | EVIE | ${message.channel.name} | ${message.createdTimestamp}`);
 				message.channel.send({ embeds: [embed] });
