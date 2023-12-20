@@ -2,7 +2,7 @@ const cooldown = new Set();
 const color = Math.floor(Math.random() * 16777215);
 const { errorLogger, commandLogger } = require('../../logger.js');
 
-const allowedUserIds = [process.env.sweat, process.env.buzz, process.env.banana, process.env.otter, process.env.cactus, process.env.flamingo, process.env.pistol, process.env.alfa, process.env.crazy, process.env.twisty];
+const allowedUserIds = [process.env.sweat, process.env.buzz, process.env.banana, process.env.otter, process.env.alfa, process.env.crazy, process.env.twisty];
 
 module.exports = {
 	name: 'homies',
@@ -50,32 +50,32 @@ module.exports = {
 						inline: true,
 					},
 					{
-						name: `gg.litt`,
-						value: '\u200b',
-						inline: true,
-					},
-					{
-						name: `gg.jazzy`,
-						value: '\u200b',
-						inline: true,
-					},
-					{
-						name: `gg.karen`,
-						value: '\u200b',
-						inline: true,
-					},
-					{
-						name: `gg.karenn`,
-						value: '\u200b',
-						inline: true,
-					},
-					{
-						name: `gg.karennn`,
-						value: '\u200b',
-						inline: true,
-					},
-					{
 						name: `gg.twisty`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
+						name: `gg.BANNED`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
+						name: `gg.BANNED`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
+						name: `gg.BANNED`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
+						name: `gg.BANNED`,
+						value: '\u200b',
+						inline: true,
+					},
+					{
+						name: `gg.BANNED`,
 						value: '\u200b',
 						inline: true,
 					},
@@ -89,10 +89,10 @@ module.exports = {
 					color: color,
 					timestamp: new Date(),
 					footer: {
-						text: "The Homies' Special List",
+						text: 'Gang Gang',
 					},
 					image: {
-						url: 'https:dn.discordapp.com/attachments/1159353644785881100/1179623658709336135/adventure-time.gif',
+						url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1187089411914072175/chost-machine.gif',
 					},
 				};
 				message.channel.send({ embeds: [embed] });
