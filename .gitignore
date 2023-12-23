@@ -39,6 +39,8 @@ guide/.vuepress/dist
 .DS_Store
 */commands/user-locked
 sub-list.csv
+doggos.js
+
 
 # Logs
 logs

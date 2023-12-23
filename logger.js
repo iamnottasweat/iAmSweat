@@ -1,23 +1,29 @@
 const pino = require('pino');
+const path = require('path');
+const fs = require('fs');
 
-const commandLoggerOptions = {
-	name: 'commandLogger',
-	level: 'info',
-};
+// Ensure the logs directory exists
+const logsDir = path.join(__dirname, 'logs');
+if (!fs.existsSync(logsDir)) {
+	fs.mkdirSync(logsDir, { recursive: true });
+}
 
-const errorLoggerOptions = {
-	name: 'errorLogger',
-	level: 'error',
-};
+// Define a function to create a logger with a specific level and file destination
+function createLogger(name, level) {
+	return pino(
+		{
+			name,
+			level: process.env[`LOG_LEVEL_${name.toUpperCase()}`] || level,
+			timestamp: pino.stdTimeFunctions.isoTime,
+		},
+		pino.destination(path.join(logsDir, `${name}Log.json`))
+	);
+}
 
-const debugLoggerOptions = {
-	name: 'debugLogger',
-	level: 'debug',
-};
-
-const commandLogger = pino(commandLoggerOptions, pino.destination('logs/commandLog.json'));
-const errorLogger = pino(errorLoggerOptions, pino.destination('logs/errorLog.json'));
-const debugLogger = pino(debugLoggerOptions, pino.destination('logs/debugLog.json'));
+// Create loggers for commands, errors, and debug with respective options
+const commandLogger = createLogger('command', 'info');
+const errorLogger = createLogger('error', 'error');
+const debugLogger = createLogger('debug', 'debug');
 
 module.exports = {
 	commandLogger,
