@@ -1,3 +1,5 @@
+const { errorLogger, commandLogger } = require('../../logger.js');
+
 module.exports = {
 	name: 'vote',
 	description: 'Reacts with a mailbox emoji for users to vote.',
@@ -14,27 +16,23 @@ module.exports = {
 			timestamp: new Date(),
 		};
 
-		// Send the embed to the channel
 		const voteMessage = await message.channel.send({ embeds: [embed] });
 
-		// React to the message with the mailbox emoji
 		await voteMessage.react('📫');
 
-		// Set up a reaction collector
 		const filter = (reaction, user) => {
 			return reaction.emoji.name === '📫' && !user.bot;
 		};
 
-		const collector = voteMessage.createReactionCollector({ filter, dispose: true });
+		const collector = voteMessage.createReactionCollector({ filter, time: 60000, dispose: true });
 
 		collector.on('collect', async (reaction, user) => {
-			// Reset the reaction count
 			if (reaction.count > 1) {
 				await reaction.users.remove(user.id);
 			}
 
-			// Send a direct message to the user with the voting link
-			user.send(`[VOTE HERE](<https://top.gg/bot/1169158044148580393/vote>)`).catch(console.error);
+			user.send(`[VOTE HERE](<https://top.gg/bot/1169158044148580393/vote>)`).catch(errorLogger.error);
+			commandLogger.info(`${message.guild.name} | ${message.author.username} | VOTE | ${message.channel.name} | ${message.createdTimestamp}`);
 		});
 	},
 };
