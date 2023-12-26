@@ -40,8 +40,19 @@ guide/.vuepress/dist
 */commands/user-locked
 sub-list.csv
 doggos.js
-
-
+JSON-DB
+# Database
+models
+models/*
+database.sqlite
+dbInit.js
+dbObjects.js
+*/database.sqlite/*
+dbFunctions.js
+read,js
+write.js
+db.json
+read.js
 # Logs
 logs
 *.log

@@ -2,37 +2,50 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'vote',
-	description: 'Reacts with a mailbox emoji for users to vote.',
+	aliases: 'v',
+	description: 'get the vote link for the bot',
 	async execute(message) {
-		const color = Math.floor(Math.random() * 16777215);
+		try {
+			const color = Math.floor(Math.random() * 16777215);
+			const voteEmbed = {
+				description: 'Upvote iAmSweat on top.gg!',
+				color: color,
+				image: {
+					url: 'https://cdn.discordapp.com/attachments/1154686461128491051/1187061090237034506/SPOILER_iAmSweat1.png',
+				},
+				footer: {
+					text: 'Use `gg.vote` to resend the embed!',
+				},
+				timestamp: new Date(),
+			};
 
-		const embed = {
-			color: color,
-			title: 'Vote for our bot!',
-			image: {
-				url: 'https://cdn.discordapp.com/attachments/1154686461128491051/1187061090237034506/SPOILER_iAmSweat1.png',
-			},
-			description: 'React with 📫 to get the voting link!',
-			timestamp: new Date(),
-		};
+			message.channel.send({
+				embeds: [voteEmbed],
+				components: [
+					{
+						type: 1,
+						components: [
+							{
+								type: 2,
+								label: 'Bot Vote',
+								style: 5,
+								url: 'https://top.gg/bot/1169158044148580393/vote',
+							},
+							{
+								type: 2,
+								label: 'Server Vote',
+								style: 5,
+								url: 'https://top.gg/servers/1154686460394483782/vote',
+							},
+						],
+					},
+				],
+			});
 
-		const voteMessage = await message.channel.send({ embeds: [embed] });
-
-		await voteMessage.react('📫');
-
-		const filter = (reaction, user) => {
-			return reaction.emoji.name === '📫' && !user.bot;
-		};
-
-		const collector = voteMessage.createReactionCollector({ filter, time: 60000, dispose: true });
-
-		collector.on('collect', async (reaction, user) => {
-			if (reaction.count > 1) {
-				await reaction.users.remove(user.id);
-			}
-
-			user.send(`[VOTE HERE](<https://top.gg/bot/1169158044148580393/vote>)`).catch(errorLogger.error);
+			message.delete().catch(errorLogger.error);
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | VOTE | ${message.channel.name} | ${message.createdTimestamp}`);
-		});
+		} catch (error) {
+			errorLogger.error(error);
+		}
 	},
 };
