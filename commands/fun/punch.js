@@ -49,14 +49,15 @@ module.exports = {
 	cooldown: 5,
 	execute(message) {
 		try {
-			const target = message.mentions.users.first();
+			const targets = message.mentions.users.map((user) => `<@${user.id}>`).join(' ');
 			const color = Math.floor(Math.random() * 16777215);
 			const image = getRandomGif(gifArray1);
+			const description = targets.length > 0 ? `${message.author} ***jaw-rocked*** ${targets}` : `${message.author} ***is randomly assaulting someone***`;
 
 			message.delete().catch(console.error);
 
 			const embed = {
-				description: target ? `${message.author} ***jaw-rocked*** ${target}` : `${message.author} ***is randomly assaulting someone***`,
+				description: description,
 				color: color,
 				image: {
 					url: image,
