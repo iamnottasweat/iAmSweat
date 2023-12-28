@@ -53,6 +53,8 @@ read,js
 write.js
 db.json
 read.js
+boo.js
+
 # Logs
 logs
 *.log

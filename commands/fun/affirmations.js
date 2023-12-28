@@ -9,15 +9,23 @@ module.exports = {
 		try {
 			const resp = await axios.get('https://www.affirmations.dev/');
 			const affirmation = resp.data.affirmation;
-			const user = message.mentions.users.first();
+			const users = message.mentions.users;
 			const color = Math.floor(Math.random() * 16777215);
 
 			message.delete().catch(console.error);
 
+			let description;
+			if (users.size > 0) {
+				const userMentions = users.map((user) => `<@${user.id}>`).join(', ');
+				description = `${message.author} **has kind words for** ${userMentions}:\n\n${affirmation}`;
+			} else {
+				description = `${affirmation}`;
+			}
+
 			const embed = {
-				description: user ? `${message.author} **has kind words for** ${user}:\n\n${affirmation}` : `${affirmation}`,
+				description: description,
 				color: color,
-				footer: { text: 'Use `gg.affirmations @user` to get a new one!' },
+				footer: { text: 'Use `gg.affirmations @user` to mention users and get a new one!' },
 				timestamp: new Date(),
 				image: {
 					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180852867083538513/statsgif4.gif',

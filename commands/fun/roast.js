@@ -9,13 +9,21 @@ module.exports = {
 		try {
 			const resp = await axios.get('https://evilinsult.com/generate_insult.php?lang=en&type=json');
 			const roast = resp.data.insult;
-			const user = message.mentions.users.first();
+			const users = message.mentions.users;
 			const color = Math.floor(Math.random() * 16777215);
 
 			message.delete().catch(console.error);
 
+			let description;
+			if (users.size > 0) {
+				const userMentions = users.map((user) => `<@${user.id}>`).join(', ');
+				description = `${message.author} **roasted** ${userMentions}:\n\n${roast}`;
+			} else {
+				description = `${roast}`;
+			}
+
 			const embed = {
-				description: user ? `${message.author} **roasted** ${user}:\n\n${roast}` : `${roast}`,
+				description: description,
 				thumbnail: {
 					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180650581241630760/roasted-oh.gif',
 				},

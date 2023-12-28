@@ -8,13 +8,21 @@ module.exports = {
 		try {
 			const resp = await axios.get('http://api.yomomma.info/');
 			const yomama = resp.data.joke;
-			const user = message.mentions.users.first();
+			const users = message.mentions.users;
 			const color = Math.floor(Math.random() * 16777215);
 
 			message.delete().catch(console.error);
 
+			let description;
+			if (users.size > 0) {
+				const userMentions = users.map((user) => `<@${user.id}>`).join(', ');
+				description = `Hey, ${userMentions}!\n${message.author} **said** :\n\n${yomama}`;
+			} else {
+				description = `${yomama}`;
+			}
+
 			const embed = {
-				description: user ? `**Hey** ${user}.. ${message.author} **told me**\n\n${yomama}` : `${yomama}`,
+				description: description,
 				color: color,
 				image: { url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1181257499068878918/your-mom-50cent.gif' },
 				footer: { text: 'Use `gg.yomama | gg.yomomma @user` to get a new one!' },
