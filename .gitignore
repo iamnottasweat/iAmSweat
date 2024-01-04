@@ -41,6 +41,14 @@ guide/.vuepress/dist
 sub-list.csv
 doggos.js
 JSON-DB
+user.js
+users.json
+reformatted_sounds_with_labels.csv
+reformat_sounds.py
+sounds.csv
+zebra.txt
+databases
+gang.js
 # Database
 models
 models/*
@@ -53,7 +61,6 @@ read,js
 write.js
 db.json
 read.js
-boo.js
 
 # Logs
 logs
@@ -65,6 +72,7 @@ lerna-debug.log*
 .pnpm-debug.log*
 pretty_logs
 serverList.js
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 

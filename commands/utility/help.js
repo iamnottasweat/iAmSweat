@@ -12,42 +12,47 @@ module.exports = {
 					name: 'Utility',
 					commands: [
 						{
-							name: '`gg.help`',
+							name: '`;help`',
 							value: '**Shows available command categories/commands**',
 							inline: false,
 						},
 						{
-							name: '`gg.embed`',
-							value: '**Custom embed builder. Use** `gg.embedhelp` for more info.',
+							name: '`;embed`',
+							value: '**Custom embed builder. Use** `;embedhelp` for more info.',
 							inline: false,
 						},
 						{
-							name: '`gg.embedhelp`',
-							value: '**Shows available arguments for use with** `gg.embed`',
+							name: '`;embedhelp`',
+							value: '**Shows available arguments for use with** `;embed`',
 							inline: false,
 						},
 						{
-							name: '`gg.dm`',
-							value: '**DM a user. Usage:** `gg.dm @user your_message_here`',
+							name: '`;dm`',
+							value: '**DM a user. Usage:** `;dm @user your_message_here`',
 							inline: false,
 						},
 						{
-							name: '`gg.hello`',
+							name: ';echo',
+							value: 'Echoes a message to send to a channel.',
+							inline: false,
+						},
+						{
+							name: '`;hello`',
 							value: "**Shouldn't be listed but it is**",
 							inline: false,
 						},
 						{
-							name: '`gg.hex`',
+							name: '`;hex`',
 							value: '**Gives a random hex color**',
 							inline: false,
 						},
 						{
-							name: '`gg.ping`',
+							name: '`;ping`',
 							value: '**See the bots latency**',
 							inline: false,
 						},
 						{
-							name: '`gg.gif`',
+							name: '`;gif`',
 							value: '**Get a random gif. There is not a large variety but there are GIFs.**',
 							inline: false,
 						},
@@ -57,53 +62,58 @@ module.exports = {
 					name: 'Fun',
 					commands: [
 						{
-							name: '`gg.affirmations`',
-							value: '**Sends a random affirmation. Usage:** `gg.affirmations @user`',
+							name: '`;affirmations`',
+							value: '**Sends a random affirmation. Usage:** `;affirmations @user`',
 							inline: false,
 						},
 						{
-							name: '`gg.chuck`',
+							name: '`;chuck`',
 							value: '**Random Chuck Norris snippets**',
 							inline: false,
 						},
 						{
-							name: '`gg.hug`',
-							value: '**Get/Give a hug from the bot. Usage:** `gg.hug | gg.hug @user`',
+							name: '`;hug`',
+							value: '**Get/Give a hug from the bot. Usage:** `;hug | ;hug @user`',
 							inline: false,
 						},
 						{
-							name: '`gg.joke`',
+							name: '`;joke`',
 							value: '**Sends a random joke**',
 							inline: false,
 						},
 						{
-							name: '`gg.pineapple`',
+							name: '`;pineapple`',
 							value: '**Find out for yourself.**',
 							inline: false,
 						},
 						{
-							name: '`gg.punch`',
-							value: '**Jaw-rock someone. Usage:** `gg.punch | gg.punch @user`',
+							name: '`;punch`',
+							value: '**Jaw-rock someone. Usage:** `;punch | ;punch @user`',
 							inline: false,
 						},
 						{
-							name: '`gg.quote`',
+							name: '`;quote`',
 							value: '**Sends a random quote**',
 							inline: false,
 						},
 						{
-							name: '`gg.roast`',
-							value: '**Roast someone. Usage:** `gg.roast | gg.roast @user`',
+							name: '`;roast`',
+							value: '**Roast someone. Usage:** `;roast | ;roast @user`',
 							inline: false,
 						},
 						{
-							name: '`gg.trump`',
+							name: '`;trump`',
 							value: '**Trump, Donald J.**',
 							inline: false,
 						},
 						{
-							name: '`gg.yomama`',
-							value: '**Sends a random Yo Momma joke. Usage:** `gg.yomama | gg.yomama @user`',
+							name: '`;yomama`',
+							value: '**Sends a random Yo Momma joke. Usage:** `;yomama | ;yomama @user`',
+							inline: false,
+						},
+						{
+							name: 'boo',
+							value: "let them know they're buns",
 							inline: false,
 						},
 					],
@@ -112,33 +122,33 @@ module.exports = {
 					name: 'Informational',
 					commands: [
 						{
-							name: '`gg.apod`',
+							name: '`;apod`',
 							value: '**Random Astronomy Picture of the Day**',
 							inline: false,
 						},
 						{
-							name: '`gg.randapod`',
+							name: '`;randapod`',
 							value: '**Random Astronomy Picture of the Day**',
 							inline: false,
 						},
 						{
-							name: '`gg.dogfact`',
+							name: '`;dogfact`',
 							value: '**Random Dog Fact**',
 							inline: false,
 						},
 						{
-							name: '`gg.define`',
-							value: '**Define a word. Usage:** `gg.define your_word_here`',
+							name: '`;define`',
+							value: '**Define a word. Usage:** `;define your_word_here`',
 							inline: false,
 						},
 						{
-							name: '`gg.nasa`',
+							name: '`;nasa`',
 							value: '**Random NASA Picture**',
 							inline: false,
 						},
 						{
-							name: '`gg.weather`',
-							value: '**Get weather info for a location. Usage:** `gg.weather your_location_here`',
+							name: '`;weather`',
+							value: '**Get weather info for a location. Usage:** `;weather your_location_here`',
 							inline: false,
 						},
 					],
@@ -147,28 +157,28 @@ module.exports = {
 					name: 'Text',
 					commands: [
 						{
-							name: '`gg.base64`',
-							value: '**Convert text to base64. Usage:** `gg.base64 your_text_here`',
+							name: '`;base64`',
+							value: '**Convert text to base64. Usage:** `;base64 your_text_here`',
 							inline: false,
 						},
 						{
-							name: '`gg.binary`',
-							value: '**Convert text to binary. Usage:** `gg.binary your_text_here`',
+							name: '`;binary`',
+							value: '**Convert text to binary. Usage:** `;binary your_text_here`',
 							inline: false,
 						},
 						{
-							name: '`gg.reverse`',
-							value: '**Reverse text. Usage:** `gg.reverse your_text_here`',
+							name: '`;reverse`',
+							value: '**Reverse text. Usage:** `;reverse your_text_here`',
 							inline: false,
 						},
 						{
-							name: '`gg.leet`',
-							value: '**Convert text to leet speak. Usage:** `gg.leet your_text_here`',
+							name: '`;leet`',
+							value: '**Convert text to leet speak. Usage:** `;leet your_text_here`',
 							inline: false,
 						},
 						{
-							name: '`gg.owo`',
-							value: '**Convert text to OwO. Usage:** `gg.owo your_text_here`',
+							name: '`;owo`',
+							value: '**Convert text to OwO. Usage:** `;owo your_text_here`',
 							inline: false,
 						},
 					],
@@ -177,18 +187,23 @@ module.exports = {
 					name: 'Images',
 					commands: [
 						{
-							name: '`gg.dog`',
+							name: '`;dog`',
 							value: '**Random dog image**',
 							inline: false,
 						},
 						{
-							name: '`gg.pikapika`',
+							name: '`;pikapika`',
 							value: '**Pikachu!**',
 							inline: false,
 						},
 						{
-							name: '`gg.img`',
-							value: '**Sends an image. Usage:** `gg.img your_query_here`',
+							name: '`;img`',
+							value: '**Sends an image. Usage:** `;img your_query_here`',
+							inline: false,
+						},
+						{
+							name: ';doggos',
+							description: 'Get eight images of my doggos.',
 							inline: false,
 						},
 					],
@@ -197,7 +212,7 @@ module.exports = {
 
 			if (args.length === 0) {
 				const availableCategories = categories.map((category) => `\`${category.name}\``).join(', ');
-				const helpMessage = `__**Usage**__\n\n\`gg.help category_name\`\n\n__**Available Categories**__\n\n${availableCategories}`;
+				const helpMessage = `__**Usage**__\n\n\`;help category_name\`\n\n__**Available Categories**__\n\n${availableCategories}`;
 
 				const helpEmbed = {
 					description: helpMessage,
