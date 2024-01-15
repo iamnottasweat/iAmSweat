@@ -10,9 +10,11 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon .",
+		"prod": "node . | npx pino-pretty",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
-		"pretty-logs": "cat log.json | pino-pretty >> pretty_logs/pretty-log.json && cat logs/commandLog.json | pino-pretty >> pretty_logs/pretty-commandLog.json && cat logs/errorLog.json | pino-pretty >> pretty_logs/pretty-errorLog.json && cat logs/debugLog.json | pino-pretty >> pretty_logs/pretty-debugLog.json"
+		"pretty-logs": "cat log.json | pino-pretty >> pretty_logs/pretty-log.json && cat logs/commandLog.json | pino-pretty >> pretty_logs/pretty-commandLog.json && cat logs/errorLog.json | pino-pretty >> pretty_logs/pretty-errorLog.json && cat logs/debugLog.json | pino-pretty >> pretty_logs/pretty-debugLog.json",
+		"dev": "node index.js | npx pino-pretty"
 	},
 	"keywords": [
 		"node.js",
