@@ -1,3 +1,54 @@
+module.exports = {
+	name: 'help',
+	description: 'lists all available commands',
+	cooldown: 30,
+	execute(message) {
+		const embeds = [];
+		const categories = {
+			'Utility': ['dm', 'echo', 'embed', 'embedhelp', 'gang', 'gif', 'hello', 'help', 'hex', 'ping', 'vote'],
+			'Text Manipulators': ['base64', 'binary', 'leet', 'mock', 'owo', 'reverse'],
+			'Informational': ['apod', 'define', 'dogfact', 'nasa', 'randapod', 'weather'],
+			'Image Creators': ['dog', 'doggos', 'img', 'pikapika'],
+			'Fun': ['affirmations', 'boo', 'chuck', 'hug', 'joke', 'pineapple', 'punch', 'quote', 'roast', 'rps', 'trump', 'yomama'],
+		};
+
+		Object.keys(categories).forEach((category) => {
+			const commands = categories[category].map((command) => `### ➢ ${command}`).join('\n');
+			const embed = {
+				title: `${category} Commands`,
+				description: commands,
+				color: Math.floor(Math.random() * 16777215),
+				timestamp: new Date(),
+			};
+			embeds.push({ embeds: [embed] });
+		});
+		let currentPage = 0;
+
+		message.channel.send(embeds[currentPage]).then((msg) => {
+			msg.react('◀️');
+			msg.react('▶️');
+
+			const filter = (reaction, user) => {
+				return ['◀️', '▶️'].includes(reaction.emoji.name) && user.id === message.author.id;
+			};
+
+			const collector = msg.createReactionCollector(filter, { time: 60000 });
+			collector.on('collect', (reaction) => {
+				reaction.users.remove(message.author);
+				if (reaction.emoji.name === '▶️') {
+					currentPage = (currentPage + 1) % embeds.length;
+				} else if (reaction.emoji.name === '◀️') {
+					currentPage = (currentPage - 1 + embeds.length) % embeds.length;
+				}
+				msg.edit(embeds[currentPage]);
+			});
+			collector.on('end', () => {
+				msg.reactions.removeAll().catch((error) => console.error('Failed to clear reactions: ', error));
+			});
+		});
+	},
+};
+/*
 const color = Math.floor(Math.random() * 16777215);
 const { errorLogger, commandLogger } = require('../../logger.js');
 
@@ -270,3 +321,4 @@ module.exports = {
 		}
 	},
 };
+*/
