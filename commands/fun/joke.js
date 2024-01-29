@@ -15,7 +15,7 @@ module.exports = {
 			const embed = {
 				description: joke,
 				color: color,
-				footer: { text: 'Use `gg.joke` to get a new one!' },
+				footer: { text: ';joke' },
 				timestamp: new Date(),
 			};
 

@@ -48,7 +48,7 @@ module.exports = {
 					image: { url: otter },
 					color: color,
 					footer: {
-						text: 'I bust shells on my belly and eat them.',
+						text: 'I bust muscles open on my belly and eat them.',
 					},
 					timestamp: new Date(),
 				};

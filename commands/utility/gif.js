@@ -76,7 +76,7 @@ module.exports = {
 				image: { url: randomGif },
 				color: color,
 				footer: {
-					text: 'Use `gg.gif` to get a new one!',
+					text: ';gif',
 				},
 			};
 

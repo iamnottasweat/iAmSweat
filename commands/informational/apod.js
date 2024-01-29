@@ -19,7 +19,7 @@ module.exports = {
 				description: apod.explanation,
 				color: color,
 				footer: {
-					text: 'Use `gg.apod` to get a new one!',
+					text: ';apod',
 				},
 				timestamp: new Date(),
 			};

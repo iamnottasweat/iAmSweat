@@ -19,7 +19,7 @@ module.exports = {
 					url: `https://singlecolorimage.com/get/${hexColor}/400x400`,
 				},
 				footer: {
-					text: 'Use `gg.hex` to get a new one!',
+					text: ';hex',
 				},
 				timestamp: new Date(),
 			};

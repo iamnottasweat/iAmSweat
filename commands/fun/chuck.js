@@ -43,7 +43,7 @@ module.exports = {
 				description: chuck,
 				image: { url: image },
 				color: color,
-				footer: { text: 'Use `gg.chuck` to get a new one!' },
+				footer: { text: ';chuck' },
 				timestamp: new Date(),
 			};
 

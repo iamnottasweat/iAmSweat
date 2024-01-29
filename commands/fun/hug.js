@@ -25,7 +25,7 @@ module.exports = {
 					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1182824057603883158/hug.gif',
 				},
 				color: color,
-				footer: { text: 'Use `gg.hug | gg.hug @user` to give another squeeze!' },
+				footer: { text: ';hug|;hug @user' },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

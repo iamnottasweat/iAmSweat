@@ -25,7 +25,7 @@ module.exports = {
 				description: description,
 				color: color,
 				image: { url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1181257499068878918/your-mom-50cent.gif' },
-				footer: { text: 'Use `gg.yomama | gg.yomomma @user` to get a new one!' },
+				footer: { text: ';yomama|;yomomma @user' },
 				timestamp: new Date(),
 			};
 

@@ -19,7 +19,7 @@ module.exports = {
 				const embed = {
 					description: quote,
 					color: color,
-					footer: { text: 'Use `gg.quote` to get a new one!' },
+					footer: { text: ';quote' },
 					timestamp: new Date(),
 				};
 

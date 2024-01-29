@@ -14,7 +14,7 @@ module.exports = {
 					url: 'https://cdn.discordapp.com/attachments/1154686461128491051/1187061090237034506/SPOILER_iAmSweat1.png',
 				},
 				footer: {
-					text: 'Use `gg.vote` to resend the embed!',
+					text: ';vote',
 				},
 				timestamp: new Date(),
 			};

@@ -25,7 +25,7 @@ module.exports = {
 				description: apod.explanation,
 				color: color,
 				footer: {
-					text: 'Use `gg.randapod` to get a new one!',
+					text: ';randapod',
 				},
 				timestamp: new Date(),
 			};

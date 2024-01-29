@@ -32,7 +32,7 @@ module.exports = {
 					},
 					color: color,
 					footer: {
-						text: 'Use `gg.img <image_name>` to get a new one!',
+						text: ';img your_query_here',
 					},
 					timestamp: new Date(),
 				};

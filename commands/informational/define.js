@@ -19,7 +19,7 @@ module.exports = {
 				description: definition,
 				color: color,
 				footer: {
-					text: 'Use `gg.define <word>` to define another word!',
+					text: ';define word_to_define',
 				},
 				timestamp: new Date(),
 			};

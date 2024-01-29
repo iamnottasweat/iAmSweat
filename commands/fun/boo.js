@@ -38,7 +38,7 @@ module.exports = {
 				description: description,
 				color: color,
 				image: { url: image },
-				footer: { text: "Use `gg.boo` to let 'em know they suuucccccked!" },
+				footer: { text: ";boo @user - to let 'em know they suuucccccked!" },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

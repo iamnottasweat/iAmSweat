@@ -62,7 +62,7 @@ module.exports = {
 				image: {
 					url: image,
 				},
-				footer: { text: 'Use `gg.punch | gg.punch @user` to give another punch!' },
+				footer: { text: ';punch|;punch @user' },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

@@ -61,6 +61,7 @@ read,js
 write.js
 db.json
 read.js
+raffle.js
 
 # Logs
 logs

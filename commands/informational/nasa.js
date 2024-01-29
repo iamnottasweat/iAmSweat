@@ -20,7 +20,7 @@ module.exports = {
 				description: nasa.collection.items[randomIndex].data[0].description,
 				color: color,
 				footer: {
-					text: 'Use `gg.nasa` to get a new one!',
+					text: ';nasa',
 				},
 				timestamp: new Date(),
 			};

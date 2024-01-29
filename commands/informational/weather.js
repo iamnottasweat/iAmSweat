@@ -43,7 +43,7 @@ module.exports = {
 				],
 				color: color,
 				footer: {
-					text: 'Use `gg.weather <location>` to get new weather info!',
+					text: ';weather location_search_here',
 				},
 				timestamp: new Date(),
 			};

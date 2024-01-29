@@ -76,7 +76,7 @@ module.exports = {
 					image: { url: icecream },
 					thumbnail: { url: thumbnail },
 					color: color,
-					footer: { text: 'Use `gg.twisty` to get a new one!' },
+					footer: { text: "Beware of Twisty - Your ears aren' t ready." },
 					timestamp: new Date(),
 				};
 				commandLogger.info(`${message.guild.name} | ${message.author.username} | TWISTY | ${message.channel.name} | ${message.createdTimestamp}`);

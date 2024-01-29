@@ -28,7 +28,7 @@ module.exports = {
 					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180650581241630760/roasted-oh.gif',
 				},
 				color: color,
-				footer: { text: 'Use `gg.roast | gg.roast @user` to get a new one!' },
+				footer: { text: ';roast|;roast @user' },
 				timestamp: new Date(),
 			};
 

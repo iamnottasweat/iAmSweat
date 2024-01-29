@@ -20,7 +20,7 @@ module.exports = {
 				color: color,
 				timestamp: new Date(),
 				footer: {
-					text: 'Use `gg.ping` to get a new latency check!',
+					text: ';ping',
 				},
 			};
 			sentMessage.edit({ content: '', embeds: [embed] });

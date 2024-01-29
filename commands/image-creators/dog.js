@@ -18,7 +18,7 @@ module.exports = {
 				},
 				color: color,
 				footer: {
-					text: 'Use `gg.dog` to get a dog image!',
+					text: ';dog',
 				},
 				timestamp: new Date(),
 			};

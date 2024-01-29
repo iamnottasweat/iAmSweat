@@ -17,7 +17,7 @@ module.exports = {
 				description: dogfact,
 				color: color,
 				footer: {
-					text: 'Use `gg.dogfact` to get a new one!',
+					text: ';dogfact',
 				},
 				timestamp: new Date(),
 			};

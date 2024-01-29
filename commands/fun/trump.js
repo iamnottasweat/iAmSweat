@@ -19,7 +19,7 @@ module.exports = {
 				},
 				color: color,
 				footer: {
-					text: 'Use `gg.trump` to get a new one!',
+					text: ';trump',
 				},
 				timestamp: new Date(),
 			};
