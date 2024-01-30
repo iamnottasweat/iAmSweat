@@ -39,6 +39,8 @@ module.exports = {
 			const gangData = JSON.parse(await fs.readFile(gangFilePath, 'utf8'));
 			gangData[userId].doubloons += 200;
 			await fs.writeFile(gangFilePath, JSON.stringify(gangData, null, 4), 'utf8');
+
+			message.delete().catch(console.error);
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | PLUNDER | ${message.channel.name} | ${message.createdTimestamp}`);
 		} else {
 			message.channel.send('Ye need to wait a bit longer before ye can plunder again, matey.');

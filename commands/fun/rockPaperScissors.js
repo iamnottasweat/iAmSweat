@@ -83,6 +83,7 @@ module.exports = {
 				});
 		}
 
+		message.delete().catch(console.error);
 		commandLogger.info(`${message.guild.name} | ${message.author.username} | RPS | ${message.channel.name} | ${message.createdTimestamp}`);
 	},
 };

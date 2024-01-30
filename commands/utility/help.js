@@ -13,7 +13,7 @@ module.exports = {
 		};
 
 		Object.keys(categories).forEach((category) => {
-			const commands = categories[category].map((command) => `### ➢ ${command}`).join('\n');
+			const commands = categories[category].map((command) => `### ➢ ;${command}`).join('\n');
 			const embed = {
 				title: `${category} Commands`,
 				description: commands,
