@@ -1,15 +1,7 @@
 const axios = require('axios');
 const { commandLogger, errorLogger } = require('../../logger.js');
 
-const gifArray1 = [
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140965029838878/chuck-norris-3.gif',
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140964664946688/chuck-norris-2.gif',
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140965398958112/chuck-norris-4.gif',
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140966430736414/chuck-norris-6.gif',
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140966795661383/chuck-norris-8.gif',
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140964149055509/chuck-norris-1.gif',
-	'https://cdn.discordapp.com/attachments/1159353644785881100/1181140965814186034/chuck-norris-5.gif',
-];
+const gifArray1 = ['https://i.imgur.com/eSlPOo2.gif', 'https://i.imgur.com/W3rza10.gif', 'https://i.imgur.com/zWTv6bm.gif', 'https://i.imgur.com/eGhYiBZ.gif', 'https://i.imgur.com/u34ky4r.gif', 'https://i.imgur.com/kpoffDo.gif', 'https://i.imgur.com/bMBtAKp.gif'];
 
 const usedGifs = new Set();
 const gifHistorySize = 7;

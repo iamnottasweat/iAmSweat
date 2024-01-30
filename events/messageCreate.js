@@ -3,18 +3,9 @@ require('dotenv').config();
 module.exports = (client, prefixes) => {
 	const cooldowns = new Map();
 	const exemptUserID = process.env.sweat;
-	const restrictedGuildId = process.env.restrictedGuildId;
-	const allowedChannelId = process.env.allowedChannelId;
 	client.on('messageCreate', (message) => {
 		const prefix = prefixes.find((p) => message.content.startsWith(p));
 		if (!message.content.startsWith(prefix) || message.author.bot) return;
-
-		if (message.guild && message.guild.id === restrictedGuildId) {
-			if (message.channel.id !== allowedChannelId) {
-				message.channel.send('Commands are not allowed in this channel yet.');
-				return;
-			}
-		}
 
 		const args = message.content.slice(prefix.length).trim().split(/ +/);
 		const commandName = args.shift().toLowerCase();

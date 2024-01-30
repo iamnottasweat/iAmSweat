@@ -22,7 +22,7 @@ module.exports = {
 			const embed = {
 				description: description,
 				thumbnail: {
-					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1182824057603883158/hug.gif',
+					url: 'https://i.imgur.com/ApLxABc.gif',
 				},
 				color: color,
 				footer: { text: ';hug|;hug @user' },

@@ -28,7 +28,7 @@ module.exports = {
 				timestamp: new Date(),
 				footer: { text: ';affirmations|;affirmations @user' },
 				image: {
-					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180852867083538513/statsgif4.gif',
+					url: 'https://i.imgur.com/0UOV1M6.gif',
 				},
 			};
 

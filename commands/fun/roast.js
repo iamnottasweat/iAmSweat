@@ -25,7 +25,7 @@ module.exports = {
 			const embed = {
 				description: description,
 				thumbnail: {
-					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1180650581241630760/roasted-oh.gif',
+					url: 'https://i.imgur.com/wR5hY4l.gif',
 				},
 				color: color,
 				footer: { text: ';roast|;roast @user' },
