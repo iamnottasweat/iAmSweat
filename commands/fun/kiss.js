@@ -1,4 +1,4 @@
-const gifArray1 = ['https://i.imgur.com/sO0HHCc.gif', 'https://i.imgur.com/b0rFWwG.gif', 'https://i.imgur.com/swtG30L.gif', 'https://i.imgur.com/nBU5Jv5.gif', 'https://i.imgur.com/DsFZRVt.gif', 'https://i.imgur.com/dTapjWT.gif', 'https://i.imgur.com/v4hulaJ.gif'];
+const gifArray1 = ['https://i.imgur.com/sO0HHCc.gif', 'https://i.imgur.com/b0rFWwG.gif', 'https://i.imgur.com/swtG30L.gif', 'https://i.imgur.com/nBU5Jv5.gif', 'https://i.imgur.com/DsFZRVt.gif', 'https://i.imgur.com/dTapjWT.gif', 'https://i.imgur.com/v4hulaJ.gif', 'https://i.imgur.com/lS71XHO.gif'];
 
 const usedGifs = new Set();
 const gifHistorySize = 8;
