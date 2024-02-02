@@ -4,6 +4,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'hex',
 	description: 'returns a random hex color',
+	usage: ';hex',
+	category: 'utility',
 	cooldown: 5,
 	execute(message) {
 		try {
@@ -17,9 +19,6 @@ module.exports = {
 				color: color,
 				thumbnail: {
 					url: `https://singlecolorimage.com/get/${hexColor}/400x400`,
-				},
-				footer: {
-					text: ';hex',
 				},
 				timestamp: new Date(),
 			};

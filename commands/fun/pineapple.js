@@ -2,6 +2,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'pineapple',
 	description: 'global safeword',
+	usage: ';pineapple',
+	category: 'fun',
 	cooldown: 5,
 	execute(message) {
 		try {
@@ -14,9 +16,6 @@ module.exports = {
 				description:
 					"# [If you thought for a second,](https://fortnitetracker.com/profile/all/iAmNottaSweat)\n\n# [that anything about this could,](https://duckduckgo.com/?q=capybara&iax=images&ia=images)\n\n# [be normal I would beg to ask,](https://youtu.be/dQw4w9WgXcQ)\n\n# [do you even know yourself bro?](https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan)\n\n# [I didn't think so. What's this?](https://www.spitecult.com/)\n\n# [Find out, and quit being a poonani, fam.](https://youtu.be/HfW3ssA9LG4)",
 				color: color,
-				footer: {
-					text: ';pineapple',
-				},
 				timestamp: new Date(),
 			};
 

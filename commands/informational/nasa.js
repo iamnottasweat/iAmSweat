@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'nasa',
 	description: 'let NASA surprise you with a photo.',
+	usage: ';nasa',
+	category: 'informational',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -19,9 +21,6 @@ module.exports = {
 				title: 'NASA Image',
 				description: nasa.collection.items[randomIndex].data[0].description,
 				color: color,
-				footer: {
-					text: ';nasa',
-				},
 				timestamp: new Date(),
 			};
 

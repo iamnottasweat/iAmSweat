@@ -8,6 +8,8 @@ function randomDate(start, end) {
 module.exports = {
 	name: 'randapod',
 	description: 'returns the Astronomy Picture of the Day',
+	usage: ';randapod',
+	category: 'informational',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -24,9 +26,6 @@ module.exports = {
 				title: apod.title,
 				description: apod.explanation,
 				color: color,
-				footer: {
-					text: ';randapod',
-				},
 				timestamp: new Date(),
 			};
 

@@ -22,6 +22,8 @@ function getRandomGif(gifArray) {
 module.exports = {
 	name: 'chuck',
 	description: 'returns a random Chuck Norris joke',
+	usage: ';chuck',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -35,7 +37,6 @@ module.exports = {
 				description: chuck,
 				image: { url: image },
 				color: color,
-				footer: { text: ';chuck' },
 				timestamp: new Date(),
 			};
 

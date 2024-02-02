@@ -14,11 +14,14 @@ setInterval(() => {
 	};
 }, 3600000);
 
-const allowedUserIds = [process.env.buzz, process.env.sweat];
+const allowedUserIds = [process.env.alfa, process.env.sweat];
 
 module.exports = {
-	name: 'buzzz',
-	description: 'returns a random image of a tank',
+	name: 'eimy',
+	description: 'returns a random image of an Aussie',
+	usage: ';eimy',
+	category: 'user-locked',
+	cooldown: 5,
 	async execute(message) {
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');
@@ -39,25 +42,25 @@ module.exports = {
 			}
 
 			try {
-				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=war-tanks&client_id=${process.env.accessKey}`);
-				const tanks = resp.data.urls.small;
+				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=australian-shepherd&client_id=${process.env.accessKey}`);
+				const aussie = resp.data.urls.small;
 
 				message.delete().catch(console.error);
 
 				const embed = {
-					image: { url: tanks },
+					image: { url: aussie },
 					color: color,
 					footer: {
-						text: 'buzzzzz buzzzzzzzzz buzzzzzzzzzzz',
+						text: 'alfa_2_who? alfa_2_yuu!',
 					},
 					timestamp: new Date(),
 				};
-				commandLogger.info(`${message.guild.name} | ${message.author.username} | BUZZZ | ${message.channel.name} | ${message.createdTimestamp}`);
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | EIMY | ${message.channel.name} | ${message.createdTimestamp}`);
 
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {
 				errorLogger.error(error);
-				message.channel.send('Sorry, I was unable to get a tank image.');
+				message.channel.send('Sorry, I was unable to get an aussie image.');
 			}
 		}
 	},

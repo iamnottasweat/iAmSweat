@@ -47,6 +47,8 @@ async function handleGameResult(userId, userChoice, botChoice, betAmount) {
 module.exports = {
 	name: 'rps',
 	description: 'play rock paper scissors',
+	usage: ';rps <rock|paper|scissors> <bet>',
+	category: 'currency',
 	cooldown: 5,
 	async execute(message, args) {
 		const betAmount = parseInt(args[1], 10);
@@ -69,7 +71,6 @@ module.exports = {
 		if (!choices.includes(userChoice)) {
 			message.channel.send('Please enter one of the following: rock, paper, or scissors');
 		}
-		// const randomResponse = await getUniqueRandomResponse();
 		if (userChoice === botChoice) {
 			message.channel.send(`### ➢  ${userChoice}  vs.  ${botChoice}  ➢  It's a tie!`);
 		} else {

@@ -20,6 +20,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'boo',
 	description: 'congratulate the participant on their poor performance',
+	usage: ';boo <target>',
+	category: 'fun',
 	cooldown: 5,
 	execute(message) {
 		try {
@@ -38,7 +40,6 @@ module.exports = {
 				description: description,
 				color: color,
 				image: { url: image },
-				footer: { text: ";boo @user - to let 'em know they suuucccccked!" },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

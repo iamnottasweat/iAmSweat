@@ -45,6 +45,9 @@ function getRandomGif(gifArray) {
 module.exports = {
 	name: 'twisty',
 	description: 'returns a random image of a twisty',
+	usage: ';twisty',
+	category: 'user-locked',
+	cooldown: 5,
 	async execute(message) {
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');
@@ -76,7 +79,7 @@ module.exports = {
 					image: { url: icecream },
 					thumbnail: { url: thumbnail },
 					color: color,
-					footer: { text: "Beware of Twisty - Your ears aren' t ready." },
+					footer: { text: "Beware of Twisty - Your ears aren't ready." },
 					timestamp: new Date(),
 				};
 				commandLogger.info(`${message.guild.name} | ${message.author.username} | TWISTY | ${message.channel.name} | ${message.createdTimestamp}`);

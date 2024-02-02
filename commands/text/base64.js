@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'base64',
 	description: 'returns the base 64 encoded message',
+	usage: ';base64 <message>',
+	category: 'text-manipulators',
 	cooldown: 5,
 	async execute(message) {
 		try {

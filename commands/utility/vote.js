@@ -2,8 +2,10 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'vote',
-	aliases: 'v',
 	description: 'get the vote link for the bot',
+	usage: ';vote',
+	category: 'utility',
+	cooldown: 5,
 	async execute(message) {
 		try {
 			const color = Math.floor(Math.random() * 16777215);
@@ -12,9 +14,6 @@ module.exports = {
 				color: color,
 				image: {
 					url: 'https://cdn.discordapp.com/attachments/1154686461128491051/1187061090237034506/SPOILER_iAmSweat1.png',
-				},
-				footer: {
-					text: ';vote',
 				},
 				timestamp: new Date(),
 			};

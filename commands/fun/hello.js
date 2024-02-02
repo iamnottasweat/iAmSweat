@@ -4,6 +4,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'hello',
 	description: 'says a greeting',
+	usage: ';hello',
+	category: 'fun',
 	cooldown: 5,
 	execute(message) {
 		try {

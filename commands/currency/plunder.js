@@ -31,11 +31,14 @@ async function updatePlunderTime(userId) {
 module.exports = {
 	name: 'plunder',
 	description: 'plunder some doubloons',
+	usage: ';plunder',
+	category: 'currency',
+	cooldown: 30,
 	async execute(message) {
 		const userId = message.author.id;
 		if (await canPlunder(userId)) {
 			await updatePlunderTime(userId);
-			message.channel.send(`Ye have successfully plundered the seas for \`200\` doubloons, \`${message.author.username}\`! Come back in \`4\` hours to plunder for more booty.`);
+			message.channel.send(`\`${message.author.username}\` has plundered the seas for \`200\` doubloons! Come back in \`4\` hours to plunder for more booty.`);
 			const gangData = JSON.parse(await fs.readFile(gangFilePath, 'utf8'));
 			gangData[userId].doubloons += 200;
 			await fs.writeFile(gangFilePath, JSON.stringify(gangData, null, 4), 'utf8');

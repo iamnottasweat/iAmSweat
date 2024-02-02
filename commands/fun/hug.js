@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'hug',
 	description: 'hugs the user',
+	usage: ';hug <target(s)>',
+	category: 'fun',
 	cooldown: 5,
 	execute(message) {
 		try {
@@ -25,7 +27,6 @@ module.exports = {
 					url: 'https://i.imgur.com/ApLxABc.gif',
 				},
 				color: color,
-				footer: { text: ';hug|;hug @user' },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'pikapika',
 	description: 'Pikachu!',
+	usage: ';pikapika',
+	category: 'image-creators',
 	cooldown: 5,
 	execute(message) {
 		try {
@@ -16,9 +18,6 @@ module.exports = {
 					url: 'https://media.discordapp.net/attachments/1168547708722745445/1170408407421943878/PikaPika.gif?width=966&height=631',
 				},
 				color: color,
-				footer: {
-					text: ';pikapika',
-				},
 				timestamp: new Date(),
 			};
 

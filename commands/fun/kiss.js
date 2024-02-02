@@ -20,6 +20,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'kiss',
 	description: 'kiss the homies',
+	usage: ';kiss <target(s)>',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -46,7 +48,6 @@ module.exports = {
 				description: description,
 				color: color,
 				image: { url: image },
-				footer: { text: ';kiss|;kiss @user(s)' },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'roast',
 	description: 'returns a random roast',
+	usage: ';roast | ;roast <target(s)>',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -28,7 +30,6 @@ module.exports = {
 					url: 'https://i.imgur.com/wR5hY4l.gif',
 				},
 				color: color,
-				footer: { text: ';roast|;roast @user' },
 				timestamp: new Date(),
 			};
 

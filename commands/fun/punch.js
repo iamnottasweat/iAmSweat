@@ -46,6 +46,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'punch',
 	description: 'punch someone',
+	usage: ';punch <target(s)>',
+	category: 'fun',
 	cooldown: 5,
 	execute(message) {
 		try {
@@ -62,7 +64,6 @@ module.exports = {
 				image: {
 					url: image,
 				},
-				footer: { text: ';punch|;punch @user' },
 				timestamp: new Date(),
 			};
 			message.channel.send({ embeds: [embed] });

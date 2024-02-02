@@ -2,7 +2,9 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'echo',
-	description: 'Echos a message to a designated channel.',
+	description: 'Echos a message to a designated channel',
+	usage: ';echo <channel> <message>',
+	category: 'utility',
 	cooldown: 5,
 
 	execute(message, args) {

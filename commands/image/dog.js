@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'dog',
 	description: 'returns a random dog picture',
+	usage: ';dog',
+	category: 'image-creators',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -17,9 +19,6 @@ module.exports = {
 					url: dog,
 				},
 				color: color,
-				footer: {
-					text: ';dog',
-				},
 				timestamp: new Date(),
 			};
 

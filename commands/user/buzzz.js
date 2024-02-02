@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { errorLogger, commandLogger } = require('../../logger.js');
+const { commandLogger, errorLogger } = require('../../logger.js');
 const color = Math.floor(Math.random() * 16777215);
 
 let commandUsage = {
@@ -14,11 +14,14 @@ setInterval(() => {
 	};
 }, 3600000);
 
-const allowedUserIds = [process.env.banana, process.env.sweat];
+const allowedUserIds = [process.env.buzz, process.env.sweat];
 
 module.exports = {
-	name: 'eviee',
-	description: 'returns a random image of a panda',
+	name: 'buzzz',
+	description: 'returns a random image of a tank',
+	usage: ';buzzz',
+	category: 'user-locked',
+	cooldown: 5,
 	async execute(message) {
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');
@@ -39,25 +42,25 @@ module.exports = {
 			}
 
 			try {
-				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=panda&client_id=${process.env.accessKey}`);
-				const panda = resp.data.urls.small;
+				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=war-tanks&client_id=${process.env.accessKey}`);
+				const tanks = resp.data.urls.small;
 
 				message.delete().catch(console.error);
 
 				const embed = {
-					image: { url: panda },
+					image: { url: tanks },
 					color: color,
 					footer: {
-						text: "I'm a banana. ",
+						text: 'buzzzzz buzzzzzzzzz buzzzzzzzzzzz',
 					},
 					timestamp: new Date(),
 				};
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | BUZZZ | ${message.channel.name} | ${message.createdTimestamp}`);
 
-				commandLogger.info(`${message.guild.name} | ${message.author.username} | EVIEE | ${message.channel.name} | ${message.createdTimestamp}`);
 				message.channel.send({ embeds: [embed] });
 			} catch (error) {
 				errorLogger.error(error);
-				message.channel.send('Sorry, I was unable to get a panda image.');
+				message.channel.send('Sorry, I was unable to get a tank image.');
 			}
 		}
 	},

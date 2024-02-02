@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'mock',
 	description: 'mocks the message',
+	usage: ';mock <message>',
+	category: 'text-manipulators',
 	cooldown: 5,
 	execute(message, args) {
 		try {

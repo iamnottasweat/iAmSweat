@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'reverse',
 	description: 'reverses the message',
+	usage: ';reverse <message>',
+	category: 'text-manipulators',
 	cooldown: 5,
 	execute(message, args) {
 		try {

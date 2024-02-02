@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'trump',
 	description: 'returns a random trump quote',
+	usage: ';trump',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -18,9 +20,6 @@ module.exports = {
 					url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1181307125151059988/trump.gif',
 				},
 				color: color,
-				footer: {
-					text: ';trump',
-				},
 				timestamp: new Date(),
 			};
 

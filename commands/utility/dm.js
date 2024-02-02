@@ -3,6 +3,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'dm',
 	description: 'dm the user',
+	usage: ';dm <target> <message>',
+	category: 'utility',
 	cooldown: 5,
 	async execute(message) {
 		const messageContent = message.content.replace('gg dm', '').trim();

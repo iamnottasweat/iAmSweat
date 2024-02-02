@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'leet',
 	description: 'returns a leet encoded message',
+	usage: ';leet <message>',
+	category: 'text-manipulators',
 	cooldown: 5,
 	async execute(message) {
 		try {

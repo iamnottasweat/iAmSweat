@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'binary',
 	description: 'returns the binary representation of the message',
+	usage: ';binary <message>',
+	category: 'text-manipulators',
 	cooldown: 5,
 	async execute(message, args) {
 		try {

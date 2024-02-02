@@ -5,7 +5,9 @@ const fs = require('fs').promises;
 
 module.exports = {
 	name: 'steal',
-	description: 'steal doubloons from the homies',
+	description: 'steal doubloons from the homies: **NOT FUNCTIONAL YET**',
+	usage: ';steal <user>',
+	category: 'currency',
 	cooldown: 30,
 
 	async execute(message) {

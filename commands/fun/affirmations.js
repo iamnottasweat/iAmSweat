@@ -4,6 +4,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'affirmations',
 	description: 'returns a random affirmation',
+	usage: ';affirmations | ;affirmations <target>',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -26,7 +28,6 @@ module.exports = {
 				description: description,
 				color: color,
 				timestamp: new Date(),
-				footer: { text: ';affirmations|;affirmations @user' },
 				image: {
 					url: 'https://i.imgur.com/0UOV1M6.gif',
 				},

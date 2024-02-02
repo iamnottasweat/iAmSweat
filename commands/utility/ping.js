@@ -4,6 +4,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'ping',
 	description: 'pong',
+	usage: ';ping',
+	category: 'utility',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -19,9 +21,6 @@ module.exports = {
 				description: `Bot Evaluation Time: **${botEvaluationTime}**ms\nLatency: **${latency}**ms.\nAPI Latency: **${API_latency}**ms.`,
 				color: color,
 				timestamp: new Date(),
-				footer: {
-					text: ';ping',
-				},
 			};
 			sentMessage.edit({ content: '', embeds: [embed] });
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | PING | ${message.channel.name} | ${message.createdTimestamp}`);

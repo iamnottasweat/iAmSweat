@@ -19,6 +19,9 @@ const allowedUserIds = [process.env.buzz, process.env.sweat];
 module.exports = {
 	name: 'buzz',
 	description: 'returns a random image of a sunrise/sunset',
+	usage: ';buzz',
+	category: 'user-locked',
+	cooldown: 5,
 	async execute(message) {
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');

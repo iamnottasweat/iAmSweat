@@ -14,11 +14,14 @@ setInterval(() => {
 	};
 }, 3600000);
 
-const allowedUserIds = [process.env.otter, process.env.sweat];
+const allowedUserIds = [process.env.banana, process.env.sweat];
 
 module.exports = {
-	name: 'lexi',
-	description: 'returns a random image of an otter',
+	name: 'evie',
+	description: 'returns a random image of a corgi',
+	usage: ';evie',
+	category: 'user-locked',
+	cooldown: 5,
 	async execute(message) {
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');
@@ -39,25 +42,24 @@ module.exports = {
 			}
 
 			try {
-				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=otter&client_id=${process.env.accessKey}`);
-				const otter = resp.data.urls.small;
+				const resp = await axios.get(`https://api.unsplash.com/photos/random?query=corgi&client_id=${process.env.accessKey}`);
+				const corgi = resp.data.urls.small;
 
 				message.delete().catch(console.error);
 
 				const embed = {
-					image: { url: otter },
+					image: { url: corgi },
 					color: color,
 					footer: {
-						text: 'I bust muscles open on my belly and eat them.',
+						text: 'yellow, peelable, edible: what am I?',
 					},
 					timestamp: new Date(),
 				};
-
+				commandLogger.info(`${message.guild.name} | ${message.author.username} | EVIE | ${message.channel.name} | ${message.createdTimestamp}`);
 				message.channel.send({ embeds: [embed] });
-				commandLogger.info(`${message.guild.name} | ${message.author.username} | LEXI | ${message.channel.name} | ${message.createdTimestamp}`);
 			} catch (error) {
 				errorLogger.error(error);
-				message.channel.send('Sorry, I was unable to get an otter image.');
+				message.channel.send('Sorry, I was unable to get a corgi image.');
 			}
 		}
 	},

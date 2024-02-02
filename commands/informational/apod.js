@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'apod',
 	description: 'returns the Astronomy Picture of the Day',
+	usage: ';apod',
+	category: 'informational',
 	cooldown: 86400,
 	async execute(message) {
 		try {
@@ -18,9 +20,6 @@ module.exports = {
 				title: apod.title,
 				description: apod.explanation,
 				color: color,
-				footer: {
-					text: ';apod',
-				},
 				timestamp: new Date(),
 			};
 

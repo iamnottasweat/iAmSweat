@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'dogfact',
 	description: 'returns a random dog fact',
+	usage: ';dogfact',
+	category: 'informational',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -16,9 +18,6 @@ module.exports = {
 			const embed = {
 				description: dogfact,
 				color: color,
-				footer: {
-					text: ';dogfact',
-				},
 				timestamp: new Date(),
 			};
 

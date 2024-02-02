@@ -3,6 +3,8 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 module.exports = {
 	name: 'embedhelp',
 	description: 'Formatting for the embed builder',
+	usage: ';embedhelp',
+	category: 'utility',
 	cooldown: 5,
 	async execute(message) {
 		try {

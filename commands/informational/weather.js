@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger');
 module.exports = {
 	name: 'weather',
 	description: 'Get the weather for a location',
+	usage: ';weather <city, state|country>',
+	category: 'informational',
 	cooldown: 5,
 	async execute(message, args) {
 		try {
@@ -42,9 +44,6 @@ module.exports = {
 					},
 				],
 				color: color,
-				footer: {
-					text: ';weather location_search_here',
-				},
 				timestamp: new Date(),
 			};
 

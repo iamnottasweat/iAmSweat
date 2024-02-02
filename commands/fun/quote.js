@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'quote',
 	description: 'returns a random quote',
+	usage: ';quote',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		if (cooldown.has(message.author.id)) {
@@ -19,7 +21,6 @@ module.exports = {
 				const embed = {
 					description: quote,
 					color: color,
-					footer: { text: ';quote' },
 					timestamp: new Date(),
 				};
 

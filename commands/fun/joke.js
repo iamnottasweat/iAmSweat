@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'joke',
 	description: 'returns a random joke',
+	usage: ';joke',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -15,7 +17,6 @@ module.exports = {
 			const embed = {
 				description: joke,
 				color: color,
-				footer: { text: ';joke' },
 				timestamp: new Date(),
 			};
 

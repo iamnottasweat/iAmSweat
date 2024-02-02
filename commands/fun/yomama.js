@@ -3,6 +3,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'yomama',
 	description: 'returns a random yomama joke',
+	usage: ';yomama | ;yomomma <target>',
+	category: 'fun',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -25,7 +27,6 @@ module.exports = {
 				description: description,
 				color: color,
 				image: { url: 'https://cdn.discordapp.com/attachments/1159353644785881100/1181257499068878918/your-mom-50cent.gif' },
-				footer: { text: ';yomama|;yomomma @user' },
 				timestamp: new Date(),
 			};
 

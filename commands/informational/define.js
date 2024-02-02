@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'define',
 	description: 'defines a word',
+	usage: ';define <word>',
+	category: 'informational',
 	cooldown: 5,
 	async execute(message) {
 		try {
@@ -18,9 +20,6 @@ module.exports = {
 				title: word,
 				description: definition,
 				color: color,
-				footer: {
-					text: ';define word_to_define',
-				},
 				timestamp: new Date(),
 			};
 

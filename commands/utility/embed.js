@@ -4,6 +4,8 @@ const { commandLogger, errorLogger } = require('../../logger');
 module.exports = {
 	name: 'embed',
 	description: 'Creates a custom embed with optional arguments',
+	usage: ';embed <args>',
+	category: 'utility',
 	cooldown: 5,
 	execute(message, args) {
 		try {

@@ -9,6 +9,8 @@ const { commandLogger, errorLogger } = require('../../logger.js');
 module.exports = {
 	name: 'img',
 	description: 'returns an image',
+	usage: ';img <image_name>',
+	category: 'image-creators',
 	cooldown: 5,
 	async execute(message, args) {
 		try {
@@ -31,9 +33,6 @@ module.exports = {
 						url: image_results[randomIndex].url,
 					},
 					color: color,
-					footer: {
-						text: ';img your_query_here',
-					},
 					timestamp: new Date(),
 				};
 				message.channel.send({ embeds: [embed] });

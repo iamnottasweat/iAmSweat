@@ -7,6 +7,9 @@ const allowedUserIds = [process.env.sweat, process.env.buzz, process.env.banana,
 module.exports = {
 	name: 'homies',
 	description: "the homies' special list",
+	usage: ';homies',
+	category: 'user-locked',
+	cooldown: 5,
 	execute(message) {
 		if (!allowedUserIds.includes(message.author.id)) {
 			message.reply('Sorry, this command is not for you.');
