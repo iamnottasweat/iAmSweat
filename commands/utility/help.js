@@ -10,11 +10,11 @@ module.exports = {
 	execute(message) {
 		const embeds = [];
 		const categories = {
+			KR3W: ['75kraffle', '125kraffle', 'raffleClose'],
 			Currency: ['gang', 'plunder', 'rockPaperScissors', 'steal'],
 			Fun: ['affirmations', 'boo', 'chuck', 'hello', 'hug', 'joke', 'kiss', 'pineapple', 'punch', 'quote', 'roast', 'trump', 'yomama'],
 			Image: ['dog', 'doggos', 'img', 'pikapika'],
 			Informational: ['apod', 'define', 'dogfact', 'nasa', 'randapod', 'weather'],
-			KR3W: ['75kraffle', '125kraffle', 'raffleClose'],
 			Text: ['base64', 'binary', 'leet', 'mock', 'owo', 'reverse'],
 			User: ['buzz', 'buzzz', 'eimy', 'evie', 'eviee', 'homies', 'lexi', 'serverList', 'twisty'],
 			Utility: ['dm', 'echo', 'embed', 'embedhelp', 'help', 'hex', 'ping', 'vote'],
@@ -52,7 +52,7 @@ module.exports = {
 				return ['◀️', '▶️'].includes(reaction.emoji.name) && user.id === message.author.id;
 			};
 
-			const collector = msg.createReactionCollector(filter, { time: 60000 });
+			const collector = msg.createReactionCollector(filter, { time: 300000 });
 			collector.on('collect', (reaction) => {
 				reaction.users.remove(message.author);
 				if (reaction.emoji.name === '▶️') {

@@ -26,17 +26,15 @@ module.exports = {
 
 			message.delete().catch(console.error);
 
-			for (let i = 0; i < 1; i++) {
-				const randomIndex = Math.floor(Math.random() * image_results.length);
-				const embed = {
-					image: {
-						url: image_results[randomIndex].url,
-					},
-					color: color,
-					timestamp: new Date(),
-				};
-				message.channel.send({ embeds: [embed] });
-			}
+			const randomIndex = Math.floor(Math.random() * image_results.length);
+			const embed = {
+				image: {
+					url: image_results[randomIndex].url,
+				},
+				color: color,
+				timestamp: new Date(),
+			};
+			message.channel.send({ embeds: [embed] });
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | IMG | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {
 			errorLogger.error(error);

@@ -3,6 +3,7 @@ require('dotenv').config();
 module.exports = (client, prefixes) => {
 	const cooldowns = new Map();
 	const exemptUserID = process.env.sweat;
+	const exemptUserID2 = process.env.otter;
 	client.on('messageCreate', (message) => {
 		const prefix = prefixes.find((p) => message.content.startsWith(p));
 		if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -18,6 +19,12 @@ module.exports = (client, prefixes) => {
 		if (message.author.id !== exemptUserID) {
 			if (!cooldowns.has(commandName)) {
 				cooldowns.set(commandName, new Map());
+			}
+
+			if (message.author.id !== exemptUserID2) {
+				if (!cooldowns.has(commandName)) {
+					cooldowns.set(commandName, new Map());
+				}
 			}
 
 			const timestamps = cooldowns.get(commandName);
