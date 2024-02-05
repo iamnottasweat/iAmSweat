@@ -4,6 +4,7 @@ module.exports = (client, prefixes) => {
 	const cooldowns = new Map();
 	const exemptUserID = process.env.sweat;
 	const exemptUserID2 = process.env.otter;
+	// const ignoredChannelIds =
 	client.on('messageCreate', (message) => {
 		const prefix = prefixes.find((p) => message.content.startsWith(p));
 		if (!message.content.startsWith(prefix) || message.author.bot) return;

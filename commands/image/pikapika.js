@@ -15,7 +15,7 @@ module.exports = {
 			const embed = {
 				description: 'Pika?',
 				image: {
-					url: 'https://media.discordapp.net/attachments/1168547708722745445/1170408407421943878/PikaPika.gif?width=966&height=631',
+					url: 'https://i.imgur.com/JGWWds8.gif',
 				},
 				color: color,
 				timestamp: new Date(),

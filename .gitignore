@@ -49,6 +49,7 @@ sounds.csv
 zebra.txt
 databases
 gang.js
+
 # Database
 models
 models/*
@@ -62,6 +63,11 @@ write.js
 db.json
 read.js
 raffle.js
+
+#Misc
+75kraffle.js
+125kraffle.js
+raffleClose.js
 
 # Logs
 logs
