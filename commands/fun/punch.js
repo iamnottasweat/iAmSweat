@@ -25,6 +25,7 @@ const gifArray1 = [
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534667579981844/lulugifs-charlie-brown.gif',
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1185534668200751204/one-punch-man.gif',
 	'https://cdn.discordapp.com/attachments/1159353644785881100/1189382700918919218/kick-swae-lee.gif',
+	'https://i.imgur.com/zpWkMiI.gif',
 ];
 
 const usedGifs = new Set();

@@ -16,8 +16,8 @@ module.exports = {
 			Image: ['dog', 'doggos', 'img', 'pikapika'],
 			Informational: ['apod', 'define', 'dogfact', 'nasa', 'randapod', 'weather'],
 			Text: ['base64', 'binary', 'leet', 'mock', 'owo', 'reverse'],
-			User: ['buzz', 'buzzz', 'eimy', 'evie', 'eviee', 'homies', 'lexi', 'serverList', 'twisty'],
-			Utility: ['dm', 'echo', 'embed', 'embedhelp', 'help', 'hex', 'ping', 'vote'],
+			User: ['buzz', 'buzzz', 'eimy', 'evie', 'eviee', 'homies', 'lexi', 'twisty'],
+			Utility: ['dm', 'echo', 'embed', 'embedhelp', 'help', 'hex', 'ping', 'pokeHelp', 'vote'],
 		};
 
 		Object.keys(categories).forEach((category) => {
