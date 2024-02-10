@@ -10,7 +10,6 @@ module.exports = {
 	execute(message) {
 		const embeds = [];
 		const categories = {
-			KR3W: ['75kraffle', '125kraffle', 'raffleClose'],
 			Currency: ['gang', 'plunder', 'rockPaperScissors', 'steal'],
 			Fun: ['affirmations', 'boo', 'chuck', 'hello', 'hug', 'joke', 'kiss', 'pineapple', 'punch', 'quote', 'roast', 'trump', 'yomama'],
 			Image: ['dog', 'doggos', 'img', 'pikapika'],
