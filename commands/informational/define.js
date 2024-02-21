@@ -9,7 +9,8 @@ module.exports = {
 	cooldown: 5,
 	async execute(message) {
 		try {
-			const resp = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${message.content}`);
+			const wordToDefine = message.content.split(' ').slice(1).join(' ');
+			const resp = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${wordToDefine}`);
 			const definition = resp.data[0].meanings[0].definitions[0].definition;
 			const color = Math.floor(Math.random() * 16777215);
 			const word = resp.data[0].word;

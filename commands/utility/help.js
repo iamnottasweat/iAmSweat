@@ -10,12 +10,12 @@ module.exports = {
 	execute(message) {
 		const embeds = [];
 		const categories = {
-			Currency: ['gang', 'plunder', 'rockPaperScissors', 'steal'],
+			Currency: ['gang', 'plunder', 'rockPaperScissors'],
 			Fun: ['affirmations', 'boo', 'chuck', 'hello', 'hug', 'joke', 'kiss', 'pineapple', 'punch', 'quote', 'roast', 'trump', 'yomama'],
-			Image: ['dog', 'doggos', 'img', 'pikapika'],
+			Image: ['dog', 'doggos', 'pikapika'],
 			Informational: ['apod', 'define', 'dogfact', 'nasa', 'randapod', 'weather'],
 			Text: ['base64', 'binary', 'leet', 'mock', 'owo', 'reverse'],
-			User: ['buzz', 'buzzz', 'eimy', 'evie', 'eviee', 'homies', 'lexi', 'twisty'],
+			//			User: ['buzz', 'buzzz', 'eimy', 'evie', 'eviee', 'homies', 'lexi', 'twisty'],
 			Utility: ['dm', 'echo', 'embed', 'embedhelp', 'help', 'hex', 'ping', 'pokeHelp', 'vote'],
 		};
 
