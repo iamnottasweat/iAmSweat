@@ -8,7 +8,6 @@ if (!fs.existsSync(logsDir)) {
 	fs.mkdirSync(logsDir, { recursive: true });
 }
 
-// Define a function to create a logger with a specific level and file destination
 function createLogger(name, level) {
 	return pino(
 		{
@@ -20,7 +19,6 @@ function createLogger(name, level) {
 	);
 }
 
-// Create loggers for commands, errors, and debug with respective options
 const commandLogger = createLogger('command', 'info');
 const errorLogger = createLogger('error', 'error');
 const debugLogger = createLogger('debug', 'debug');
