@@ -3,30 +3,36 @@ const { errorLogger, commandLogger } = require('../../logger.js');
 
 module.exports = {
 	name: 'ping',
-	description: 'pong',
+	description: 'Checks the latency of the bot and the API',
 	usage: ';ping',
-	category: 'utility',
+	category: 'Utility',
 	cooldown: 5,
 	async execute(message) {
 		try {
-			const sentMessage = await message.channel.send('Pinging...');
-			const latency = sentMessage.createdTimestamp - message.createdTimestamp;
-			const API_latency = Math.round(message.client.ws.ping);
-			const botEvaluationTime = Math.round(latency - API_latency);
-
-			message.delete().catch(console.error);
-
 			const embed = {
-				title: '**Pong!**',
-				description: `Bot Evaluation Time: **${botEvaluationTime}**ms\nLatency: **${latency}**ms.\nAPI Latency: **${API_latency}**ms.`,
+				title: 'Pong!',
 				color: color,
 				timestamp: new Date(),
+				fields: [
+					{
+						name: 'Bot Latency',
+						value: `${Math.round(message.client.ws.ping)}ms`,
+						inline: true,
+					},
+					{
+						name: 'API Latency',
+						value: `${Math.round(message.createdTimestamp - message.createdTimestamp)}ms`,
+						inline: true,
+					},
+				],
 			};
-			sentMessage.edit({ content: '', embeds: [embed] });
+
+			message.delete().catch(console.error);
+			message.channel.send({ embeds: [embed] });
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | PING | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {
 			errorLogger.error(error);
-			message.channel.send('Sorry, I was unable to pong.');
+			message.channel.send('Sorry, I was unable to ping the bot.');
 		}
 	},
 };
