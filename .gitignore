@@ -236,3 +236,4 @@ dist
 hs_err_pid*
 replay_pid*
 commands/KR3W/subevent1.js
+commands/KR3W/krewrules.js
