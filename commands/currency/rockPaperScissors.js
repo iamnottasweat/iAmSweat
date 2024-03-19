@@ -37,9 +37,9 @@ async function handleGameResult(userId, userChoice, botChoice, betAmount) {
 		}
 		await updateUserDoubloons(userId, userDoubloons);
 		if (userDoubloons === 0) {
-			return `### ➢ WOW! You just lost all your doubloons! Better luck next time, pointdexter.`;
+			return `### WOW! You just lost all your doubloons! Better luck next time, pointdexter.`;
 		} else {
-			return `### ➢ OOF! Hand \`${lossAmount}\` doubloons over, punk.`;
+			return `### OOF! Hand \`${lossAmount}\` doubloons over, punk.`;
 		}
 	}
 }

@@ -11,9 +11,7 @@ module.exports = {
 		try {
 			const hexColor = Math.floor(Math.random() * 16777215).toString(16);
 			const decimalColor = parseInt(hexColor, 16);
-
 			message.delete().catch(console.error);
-
 			const embed = {
 				description: `__**Random Hex Color**__\n\n**HEX:** __***#${hexColor}***__\n\n**DECIMAL:** __***${decimalColor}***__`,
 				color: color,
@@ -22,7 +20,6 @@ module.exports = {
 				},
 				timestamp: new Date(),
 			};
-
 			message.channel.send({ embeds: [embed] });
 			commandLogger.info(`${message.guild.name} | ${message.author.username} | HEX | ${message.channel.name} | ${message.createdTimestamp}`);
 		} catch (error) {

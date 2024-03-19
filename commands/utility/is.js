@@ -7,7 +7,7 @@ async function checkName(name) {
 		return true;
 	}
 	try {
-		const data = await fs.readFile(path.join(__dirname, '../../../iAmSweat/databases/ugm.json'), 'utf-8');
+		const data = await fs.readFile(path.join(__dirname, '../../../iAmSweat/databases/umg.json'), 'utf-8');
 		const names = JSON.parse(data).map((storedName) => storedName.toLowerCase());
 		return names.includes(lowerCaseName);
 	} catch (error) {
