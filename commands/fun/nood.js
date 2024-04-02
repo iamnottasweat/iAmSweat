@@ -7,6 +7,7 @@ module.exports = {
 	execute(message) {
 		const user = message.mentions.users.first();
 		const noodleMessage = `You are a noodle, ${user}.`;
+		message.delete().catch(console.error);
 		message.channel.send(noodleMessage);
 	},
 };

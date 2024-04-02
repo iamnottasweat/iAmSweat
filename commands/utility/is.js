@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
-const alwaysIllegal = ['Buzz', 'Evie', 'Eimy', 'Lexi', 'Twisty', 'Vicki', 'Esther', 'Nicky', 'Manny', 'Frankie', 'Andy', 'Adrian', 'Kassie', 'Erik', 'Deissy', 'Bam', 'Mel', 'Cody', 'Mike', 'Mikaroni', 'Abeka', 'Tom', 'Thomas', 'Renee', 'Mack', 'Pickelz', 'Nique', 'Rennie', 'Melissa'];
+const alwaysIllegal = ['Buzz', 'Evie', 'Eimy', 'Lexi', 'Twisty', 'Vicki', 'Esther', 'Nicky', 'Manny', 'Frankie', 'Andy', 'Adrian', 'Erik', 'Deissy', 'Bam', 'Mel', 'Cody', 'Mike', 'Mikaroni', 'Abeka', 'Tom', 'Thomas', 'Renee', 'Mack', 'Pickelz', 'Nique', 'Rennie', 'Melissa'];
 async function checkName(name) {
 	const lowerCaseName = name.toLowerCase();
 	if (alwaysIllegal.map((n) => n.toLowerCase()).includes(lowerCaseName)) {

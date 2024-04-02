@@ -237,3 +237,8 @@ hs_err_pid*
 replay_pid*
 commands/KR3W/subevent1.js
 commands/KR3W/krewrules.js
+commands/KR3W/50kraffle.js
+commands/KR3W/100kraffle.js
+commands/KR3W/200kraffle.js
+commands/KR3W/250kraffle.js
+commands/KR3W/closetest.js
