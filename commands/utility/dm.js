@@ -7,6 +7,10 @@ module.exports = {
 	category: 'utility',
 	cooldown: 5,
 	async execute(message) {
+		const allowedUserID = '612602430898831360';
+		if (message.author.id !== allowedUserID) {
+			return message.reply('You dont have the goated permissions');
+		}
 		const messageContent = message.content.replace('gg dm', '').trim();
 		const user = message.mentions.users.first();
 
